@@ -31,10 +31,10 @@ class Main extends React.Component {
       })
   }
 
-  handleCreate = (createTip) => {
+  addTip = (tip) => {
     fetch('/tips', {
-      body: JSON.stringify(createTip),
-      method: 'Post',
+      body: JSON.stringify(tip),
+      method: 'POST',
       headers: {
         'Accept': 'application/json, text/plain, */*',
         'Content-Type': 'application/json'
@@ -52,9 +52,9 @@ class Main extends React.Component {
       .catch(err => console.log(err))
   }
 
-  handleUpdate = (updateTip) => {
-    fetch(`tips/${updatedTip.id}`, {
-      body: JSON.stringify(updateTip),
+  updateTip = (tip) => {
+    fetch(`tips/${tip.id}`, {
+      body: JSON.stringify(tip),
       method: 'PUT',
       headers: {
         'Accept': 'application/json, text/plain, */*',
@@ -68,10 +68,44 @@ class Main extends React.Component {
       .catch(err => console.log(err))
   }
 
-  handleDelete = (id) => {
+  deleteTip = (id) => {
     fetch(`tips/${id}`, {
-      method:
+      method: 'DELETE',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
     })
+      .then(data => {
+        this.setState(prevState => {
+          const tips = prevState.tips.filter( tip => tip.id !== id)
+          console.log(tips)
+          return { tips }
+        })
+      })
+      .catch(err => console.log(err))
+  }
 
+  // ++++++++++++++
+  // LIFE CYCLES
+  // ++++++++++++++
+  componentDidMount() {
+    this.fetchtips()
+  }
+
+  // ++++++++++++
+  // RENDER
+  // ++++++++++++
+  render () {
+    return (
+      <main>
+        <h1>{this.props.view.pageTitle}</h1>
+        { this.props.view.page === 'index'
+          ? this.state.tips.map((tip) => (
+            <Tip
+              key={}
+          ))}
+      </main>
+    )
   }
 }
