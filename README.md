@@ -17,6 +17,10 @@ This app allows users to add and share their tips on how to reduce plastic usage
 * Users will be able to drag and drop plastic icons to view those info.
 * Users will be able to edit and delete their posts.
 
+## Wireframes
+
+![wireframe_1](/image.png)
+
 ## Challenges
 * 
 ## Future Improvements
