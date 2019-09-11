@@ -99,6 +99,8 @@ class Main extends React.Component {
   render () {
     return (
       <main>
+
+
         <h1>{this.props.view.pageTitle}</h1>
         { this.props.view.page === 'index'
           ? this.state.tips.map((tip) => (
@@ -116,6 +118,12 @@ class Main extends React.Component {
               view={this.props.view}
             />
         }
+        <div className="ocean">
+          <div className="wave"></div>
+          <div className="wave"></div>
+          <div className="wave"></div>
+        </div>
+
       </main>
     )
   }

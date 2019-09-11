@@ -1,15 +1,62 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+// best seen at 1500px or less
+
+html, body { height: 100%; }
+body {
+  /* background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, #2A55B5 35%, #254A9D 100%); */
+  /* background-color: #323232; */
+  overflow: hidden;
+}
+
+.ocean {
+  height: 700px;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background: #00ABDF;
+  z-index: -1;
+}
+
+.wave {
+  background: url(wave.svg) repeat-x;
+  position: absolute;
+  top: -150px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+  z-index: 1;
+}
+
+.wave:nth-of-type(2) {
+  background: url(wave2.svg) repeat-x;
+  top: -160px;
+  animation: wave 5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 5s ease -1.25s infinite;
+  /* opacity: 1; */
+  z-index: -1;
+}
+
+.wave:nth-of-type(3) {
+  background: url(wave3.svg) repeat-x;
+  top: -170px;
+  animation: wave 5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.225s infinite, swell 5s ease -2.25s infinite;
+  /* opacity: 1; */
+  z-index: -2;
+}
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}
