@@ -79,7 +79,7 @@ class App extends React.Component {
   render () {
     return (
       <div className="container">
-        {/*<Header/>*/}
+        <Header handleView={this.handleView}/>
         <div className="main-container">
           <Main
             view={this.state.view}

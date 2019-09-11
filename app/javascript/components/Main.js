@@ -106,12 +106,12 @@ class Main extends React.Component {
               key={tip.id}
               tip={tip}
               handleView={this.props.handleView}
-              handleDelete={this.handleDelete}
+              handleDelete={this.deleteTip}
             />
           ))
           : <Form
-              handleCreate={this.handleCreate}
-              handleUpdate={this.handleUpdate}
+              handleAdd={this.addTip}
+              handleUpdate={this.updateTip}
               formInputs={this.props.formInputs}
               view={this.props.view}
             />

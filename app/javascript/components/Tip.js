@@ -14,9 +14,23 @@ class Tip extends React.Component {
   render () {
     return (
       <article>
-        <div>
-          <h1>{this.props.tip.title}</h1>
-        </div>
+         <div className="tip-header">
+            <img src={this.props.tip.image} alt="" />
+            <h1>{this.props.tip.username}</h1>
+         </div>
+         <div className="post-body">
+            {this.props.tip.body}
+         </div>
+         <div className="post-options">
+            <ul>
+               <li onClick={() =>
+                  {this.props.handleView('editTip', this.props.tip)}}>
+                  edit tip</li>
+               <li onClick={() =>
+                  {this.props.handleDelete(this.props.tip.id)
+               }}>delete tip</li>
+            </ul>
+         </div>
       </article>
     )
   }
