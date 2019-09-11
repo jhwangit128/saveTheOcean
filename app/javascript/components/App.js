@@ -67,16 +67,32 @@ class App extends React.Component {
     this.setState({
       view: {
         page: view,
-        
-      }
-      }
+        pageTitle: pageTitle
+      },
+      formInputs : formInputs
     })
   }
+
+  // ++++++++++++
+  // RENDER
+  // ++++++++++++
   render () {
     return (
-      <h1>Save The Ocean!</h1>
+      <div className="container">
+        <Header/>
+        <div className="main-container">
+          <Main
+            view={this.state.view}
+            handleView={this.handleView}
+            formInputs={this.state.formInputs}
+          />
+        </div>
+      </div>
     )
   }
 }
 
+// ++++++++++++++++++++++++++++++++++++
+// EXPORT
+// ++++++++++++++++++++++++++++++++++++
 export default App
