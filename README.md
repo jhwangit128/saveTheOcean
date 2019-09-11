@@ -21,6 +21,8 @@ This app allows users to add and share their tips on how to reduce plastic usage
 
 ![wireframe_1](wireframes/wireframe1.png)
 ![wireframe_2](wireframes/wireframe2.png)
+![wireframe_3](wireframes/wireframe3.png)
+![wireframe_4](wireframes/wireframe4.png)
 
 ## Challenges
 * 
