@@ -2,6 +2,7 @@
 link to live site: https://
 
 ## About
+
 * Ocean plastic pollution awareness site
 * This app allows users to add and share their tips on how to reduce plastic waste.
 
