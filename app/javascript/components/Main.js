@@ -13,7 +13,7 @@ class Main extends React.Component {
   // ++++++++++++
   // STATE
   // ++++++++++++
-  contructor(props) {
+  constructor(props) {
     super(props)
     this.state = {
       tips: []
@@ -103,9 +103,25 @@ class Main extends React.Component {
         { this.props.view.page === 'index'
           ? this.state.tips.map((tip) => (
             <Tip
-              key={}
-          ))}
+              key={tip.id}
+              tip={tip}
+              handleView={this.props.handleView}
+              handleDelete={this.handleDelete}
+            />
+          ))
+          : <Form
+              handleCreate={this.handleCreate}
+              handleUpdate={this.handleUpdate}
+              formInputs={this.props.formInputs}
+              view={this.props.view}
+            />
+        }
       </main>
     )
   }
 }
+
+// ++++++++++++++++++++++++++++++++++++
+// EXPORT
+// ++++++++++++++++++++++++++++++++++++
+export default Main
