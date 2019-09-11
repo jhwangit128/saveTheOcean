@@ -5,7 +5,7 @@
 import React from 'react'
 import Header from './Header.js'
 import Main from './Main.js'
-import Footer from './Main.js'
+import Footer from './Footer.js'
 
 // ++++++++++++++++++++++++++++++++++++
 // COMPONENET CLASS
@@ -79,7 +79,7 @@ class App extends React.Component {
   render () {
     return (
       <div className="container">
-        <Header/>
+        {/*<Header/>*/}
         <div className="main-container">
           <Main
             view={this.state.view}

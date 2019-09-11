@@ -90,7 +90,7 @@ class Main extends React.Component {
   // LIFE CYCLES
   // ++++++++++++++
   componentDidMount() {
-    this.fetchtips()
+    this.fetchTips()
   }
 
   // ++++++++++++
