@@ -2,7 +2,8 @@
 link to live site: https://
 
 ## About
-This app allows users to add and share their tips on how to reduce plastic usage.
+* Ocean plastic pollution awareness site
+* This app allows users to add and share their tips on how to reduce plastic waste.
 
 ## Tech used
 
@@ -25,6 +26,6 @@ This app allows users to add and share their tips on how to reduce plastic usage
 ![wireframe_4](wireframes/wireframe4.png)
 
 ## Challenges
-* 
+*
 ## Future Improvements
-* 
+*
