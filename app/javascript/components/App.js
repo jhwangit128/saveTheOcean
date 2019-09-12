@@ -6,6 +6,8 @@ import React from 'react'
 import Header from './Header.js'
 import Main from './Main.js'
 import Footer from './Footer.js'
+import Button from '@material-ui/core/Button';
+import Whale from './Whale.js'
 
 // ++++++++++++++++++++++++++++++++++++
 // COMPONENET CLASS
@@ -48,6 +50,9 @@ class App extends React.Component {
       case 'index':
         pageTitle = "Let's save the ocean"
         break
+      case 'showTips':
+        pageTitle = "Tips"
+        break
       case 'addTip':
         pageTitle = 'Add a Tip'
         break
@@ -86,6 +91,12 @@ class App extends React.Component {
             handleView={this.handleView}
             formInputs={this.state.formInputs}
           />
+        <Whale/>
+        </div>
+        <div className="ocean">
+          <div className="wave"></div>
+          <div className="wave"></div>
+          <div className="wave"></div>
         </div>
       </div>
     )

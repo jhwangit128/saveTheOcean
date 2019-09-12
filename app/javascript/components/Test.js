@@ -5,12 +5,11 @@
 import React from 'react'
 import Tip from './Tip.js'
 import Form from './Form.js'
-import Whale from './Whale.js'
 
 // ++++++++++++++++++++++++++++++++++++
 // COMPONENET CLASS
 // ++++++++++++++++++++++++++++++++++++
-class Main extends React.Component {
+class Test extends React.Component {
   // ++++++++++++
   // STATE
   // ++++++++++++
@@ -100,7 +99,6 @@ class Main extends React.Component {
   render () {
     return (
       <main>
-
         <div className="main-contents">
           <h1>{this.props.view.pageTitle}</h1>
           { this.props.view.page === 'index'
@@ -119,9 +117,13 @@ class Main extends React.Component {
                 view={this.props.view}
               />
           }
+        </div>
+        <div className="ocean">
+          <div className="wave"></div>
+          <div className="wave"></div>
+          <div className="wave"></div>
+        </div>
 
-
-      </div>
       </main>
     )
   }

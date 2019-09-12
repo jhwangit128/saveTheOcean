@@ -2,7 +2,8 @@
 // DEPENDENCIES
 // ++++++++++++++++++++++++++++++++++++
 // packages & components
-  import React from 'react'
+import React from 'react'
+import Button from '@material-ui/core/Button';
 
   // ++++++++++++++++++++++++++++++++++++
   // COMPONENET CLASS
@@ -13,13 +14,17 @@ class Header extends React.Component {
       <header>
         <h1 onClick={() =>
           {this.props.handleView('index')}}>
-            Save The Ocean
+            SAVE THE<br/>OCEAN
         </h1>
         <div>
-          <button onClick={() =>
+          <Button className="tips-btn" variant="contained" color="primary" onClick={() =>
+            {this.props.handleView('showTips')
+
+          }}>Tips</Button>
+          <Button className="add-tip-btn" variant="contained" color="primary" onClick={() =>
             {this.props.handleView('addTip')}}>
             Add a Tip
-          </button>
+          </Button>
         </div>
       </header>
     )
