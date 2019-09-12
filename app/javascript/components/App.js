@@ -91,7 +91,6 @@ class App extends React.Component {
             handleView={this.handleView}
             formInputs={this.state.formInputs}
           />
-        <Whale/>
         </div>
         <div className="ocean">
           <div className="wave"></div>

@@ -2,7 +2,7 @@
 // DEPENDENCIES
 // ++++++++++++++++++++++++++++++++++++
 // packages & components
-import React from 'react'
+import React from 'react';
 
 // ++++++++++++++++++++++++++++++++++++
 // COMPONENET CLASS
@@ -69,6 +69,7 @@ class Form extends React.Component {
   // ++++++++++++
   render () {
     return (
+      <div className="form-container">
       <form onSubmit={this.handleSubmit}>
         <label>
           title
@@ -88,6 +89,7 @@ class Form extends React.Component {
         </label>
         <input type="submit" value="submit"/>
       </form>
+      </div>
     )
   }
 }

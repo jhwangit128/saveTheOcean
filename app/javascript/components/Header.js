@@ -18,7 +18,7 @@ class Header extends React.Component {
         </h1>
         <div>
           <Button className="tips-btn" variant="contained" color="primary" onClick={() =>
-            {this.props.handleView('showTips')
+            {this.props.handleView('index')
 
           }}>Tips</Button>
           <Button className="add-tip-btn" variant="contained" color="primary" onClick={() =>
