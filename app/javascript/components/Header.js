@@ -20,7 +20,7 @@ class Header extends React.Component {
           <Button className="tips-btn" variant="contained" color="primary" onClick={() =>
             {this.props.handleView('index')
 
-          }}>Tips</Button>
+          }}>Home</Button>
           <Button className="add-tip-btn" variant="contained" color="primary" onClick={() =>
             {this.props.handleView('addTip')}}>
             Add a Tip

@@ -25,20 +25,47 @@ class Form extends React.Component {
   // ++++++++++++
   // HANDLERS
   // ++++++++++++
-  handleChange = (e) => {
-    this.setState({[e.target.id] : e.target.value})
-  }
-
-  handleSubmit = (e) => {
-    e.preventDefault()
-
-    if(this.props.view.page === 'addTip') {
-      this.props.handleAdd(this.state)
-    } else if(this.props.view.page === 'editTip') {
-      this.props.handleUpdate(this.state)
+  handleChange = (event) => {
+    if (event.target){
+      this.setState({[event.target.id] : event.target.value})
+    } else {
+      this.setState({body: event})
     }
   }
 
+  handleSubmit = (event) => {
+    event.preventDefault()
+    if (this.checkFields()){
+      const submit = {
+        title: this.state.title,
+        username: this.state.username,
+        image: this.state.image,
+        body: this.state.body,
+        id: this.state.id
+      }
+    if(this.props.view.page === 'addTip') {
+      this.props.handleAdd(submit)
+    } else if(this.props.view.page === 'editTip') {
+      this.props.handleUpdate(submit)
+    }
+    this.setState({
+      title: "",
+      username: "",
+      image:"",
+      body: "",
+      id: null
+    })
+  } else {
+    alert("Please don't leave any fields empty!")
+  }
+}
+  checkFields = () => {
+  if (this.state.title && this.state.username && this.state.body && this.state.image){
+    return true
+  } else {
+    return false
+  }
+  }
   // ++++++++++++++
   // LIFE CYCLES
   // ++++++++++++++
@@ -70,7 +97,7 @@ class Form extends React.Component {
   render () {
     return (
       <div className="form-container">
-      <form onSubmit={this.handleSubmit}>
+      <form className="form" onSubmit={this.handleSubmit}>
         <label>
           title
           <input type="text" placeholder="title" id="title" value={this.state.title} onChange={this.handleChange}/>
@@ -86,8 +113,8 @@ class Form extends React.Component {
         <label>
           body
           <textarea placeholder="tip" id="body" value={this.state.body} onChange={this.handleChange}></textarea>
-        </label>
-        <input type="submit" value="submit"/>
+        </label><br /><br />
+        <input type="submit" value="Submit" />
       </form>
       </div>
     )

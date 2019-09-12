@@ -6,6 +6,7 @@ import React from 'react'
 import Tip from './Tip.js'
 import Form from './Form.js'
 import Whale from './Whale.js'
+import CountUp from 'react-countup';
 
 // ++++++++++++++++++++++++++++++++++++
 // COMPONENET CLASS
@@ -45,6 +46,8 @@ class Main extends React.Component {
         return createdTip.json()
       })
       .then(jsonedTip => {
+        console.log(tip);
+        this.props.handleView('index')
         this.setState(prevState => {
           prevState.tips.push(jsonedTip)
           return { tips: prevState.tips }
@@ -87,6 +90,7 @@ class Main extends React.Component {
       .catch(err => console.log(err))
   }
 
+
   // ++++++++++++++
   // LIFE CYCLES
   // ++++++++++++++
@@ -104,12 +108,14 @@ class Main extends React.Component {
         <div className="main-contents">
           <h1>{this.props.view.pageTitle}</h1>
           { this.props.view.page === 'index'
-            ? this.state.tips.map((tip) => (
+            ? this.state.tips.map(tip => (
+
               <Tip
                 key={tip.id}
                 tip={tip}
                 handleView={this.props.handleView}
                 handleDelete={this.deleteTip}
+
               />
             ))
             : <Form
@@ -119,12 +125,22 @@ class Main extends React.Component {
                 view={this.props.view}
               />
           }
-
-
-      </div>
+          <div className="info-text">
+            WORLD WIDE
+            <CountUp start={0} end={500000000000}>
+              {({ countUpRef, start }) => (
+                <div>
+                  <span ref={countUpRef} />
+                  <button onClick={start}>Start</button>
+                </div>
+              )}
+            </CountUp>
+          </div>
+        </div>
       </main>
     )
   }
+
 }
 
 // ++++++++++++++++++++++++++++++++++++
