@@ -6,7 +6,8 @@ import React from 'react'
 import Tip from './Tip.js'
 import Form from './Form.js'
 import Whale from './Whale.js'
-import CountUp from 'react-countup';
+import CountUp from 'react-countup'
+import Draggable from './Draggable.js'
 
 // ++++++++++++++++++++++++++++++++++++
 // COMPONENET CLASS
@@ -126,6 +127,7 @@ class Main extends React.Component {
               />
           }
           <div className="info-text">
+          
             WORLD WIDE
             <CountUp start={0} end={500000000000}>
               {({ countUpRef, start }) => (
@@ -136,6 +138,13 @@ class Main extends React.Component {
               )}
             </CountUp>
           </div>
+          <div className="plastic-bottles">
+            <div className="plastic-bottle"></div>
+            <div className="plastic-bottle"></div>
+            <div className="plastic-bottle"></div>
+            <div className="plastic-bottle"></div>
+          </div>
+
         </div>
       </main>
     )
