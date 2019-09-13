@@ -91,11 +91,6 @@ class App extends React.Component {
             formInputs={this.state.formInputs}
           />
         </div>
-        <div className="ocean">
-          <div className="wave"></div>
-          <div className="wave"></div>
-          <div className="wave"></div>
-        </div>
         <Footer />
       </div>
     )

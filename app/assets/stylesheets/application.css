@@ -13,24 +13,23 @@
   /* --logo-font: 'Gamja Flower'; */
   /* --accent-font: 'Monda'; */
   /*COLOR*/
-  --woodsmoke: #0B0C10;
-  --dark-gray: #1F2833;
-  --gray: #25303d;
-  --lighter-gray: #36485e;
-  --light-gray: #C5C6C7;
-  --cyan: #66FCF1;
-  --breakerbay: #45A29E;
+  --medium-blue: #051FDE;
+  --palatinate-blue: #0031DD;
+  --navy-blue: #0058DE;
+  --true-blue: #006CDF;
+  --lighter-true-blue: #0080DF;
+  --rich-electric-blue: #0095DE;
+  --cerulean: #00ABDF;
+  width: 200%;
 }
 * { border: 1px solid gold; }
 body {
-  max-width: 200%;
   font-family: var(--main-font);
   margin: 0;
   color: white;
 }
 header {
-  height: 100px;
-  width: 2500px;
+  height: 150px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -42,7 +41,7 @@ header > h1 {
 /* infographics */
 .info-text {
   text-align: center;
-  margin-top: 220px;
+  margin-top: 155px;
   color: white;
   font-size: 3em;
 }
@@ -75,8 +74,6 @@ article {
 .whale {
   background: url(whale.png) no-repeat;
   background-size: contain;
-  width: 20%;
-  height: 50%;
   display: inline-block;
 }
 .plastic-bottles {
@@ -102,20 +99,21 @@ article {
   height: 60px;
   position:
 }
+.container {
+  width: 130%;
+}
+.main-container {
+  padding: 0 50px;
+  background-color: var(--cerulean);
+}
 .main-contents {
   background: url(whale.png) no-repeat;
   background-size: contain;
-  z-index: 5;
-  position: relative;
-  top: 50px;
-  left: 0;
-  width: 210%;
-  height: 900px;
+  height: 800px;
   overflow-x: auto;
   overflow-y:hidden;
-  margin-top: 50px;
-  background-color: #00ABDF;
 }
+
 /* waves css anmtion */
 .ocean {
   height: 700px;
@@ -123,11 +121,9 @@ article {
   position:absolute;
   bottom:0;
   left:0;
-  background: #00ABDF;
   z-index: -5;
   /* overflow-x: hidden; */
 }
-
 .wave {
   background: url(wave.svg) repeat-x;
   position: absolute;
@@ -138,23 +134,42 @@ article {
   transform: translate3d(0, 0, 0);
   z-index: 1;
   overflow-x: visible;
-
 }
-
 .wave:nth-of-type(2) {
   background: url(wave2.svg) repeat-x;
   top: -160px;
   animation: wave 5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 5s ease -1.25s infinite;
-  /* opacity: 1; */
   z-index: -1;
 }
-
 .wave:nth-of-type(3) {
   background: url(wave3.svg) repeat-x;
   top: -170px;
   animation: wave 5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.225s infinite, swell 5s ease -2.25s infinite;
-  /* opacity: 1; */
   z-index: -2;
+}
+.wave:nth-of-type(4) {
+  background: url(wave4.svg) repeat-x;
+  top: -180px;
+  animation: wave 5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.325s infinite, swell 5s ease -2.25s infinite;
+  z-index: -3;
+}
+.wave:nth-of-type(5) {
+  background: url(wave5.svg) repeat-x;
+  top: -190px;
+  animation: wave 5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.425s infinite, swell 5s ease -2.25s infinite;
+  z-index: -4;
+}
+.wave:nth-of-type(6) {
+  background: url(wave6.svg) repeat-x;
+  top: -200px;
+  animation: wave 5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.525s infinite, swell 5s ease -2.25s infinite;
+  z-index: -5;
+}
+.wave:nth-of-type(7) {
+  background: url(wave7.svg) repeat-x;
+  top: -170px;
+  animation: wave 5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.625s infinite, swell 5s ease -2.25s infinite;
+  z-index: -6;
 }
 @keyframes wave {
   0% {
@@ -173,6 +188,7 @@ article {
     transform: translate3d(0,5px,0);
   }
 }
+
 /* tips */
 .card-container, .form-container {
   width: 2500px;
@@ -211,16 +227,14 @@ footer {
   font-size: 12px;
   bottom:0;
   left:0;
-  width:200%;
   height: 100px;
   color: white;
+  background-color: var(--lighter-true-blue);
 }
 .footer-names {
-  background: var(--gray);
   padding: 20px 0;
 }
 .copy {
-  background: var(--woodsmoke);
   height: 15px;
   padding: 15px 0;
 }

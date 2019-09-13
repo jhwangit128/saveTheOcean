@@ -12,6 +12,15 @@ class Header extends React.Component {
   render () {
     return (
       <header>
+      <div className="ocean">
+        <div className="wave"></div>
+        <div className="wave"></div>
+        <div className="wave"></div>
+        <div className="wave"></div>
+        <div className="wave"></div>
+        <div className="wave"></div>
+        <div className="wave"></div>
+      </div>
         <h1 onClick={() =>
           {this.props.handleView('index')}}>
             SAVE THE<br/>OCEAN
