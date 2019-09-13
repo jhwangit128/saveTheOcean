@@ -22,7 +22,37 @@ Tip.create({
 })
 Tip.create({
   "title" => "Carry your own containers for take-out food and leftovers",
-  "username" =>"snow3man5",
-  "image" => "https://aswetravel.smugmug.com/Travel/GoGreenTravelGreen-2014/i-GxJhWH8/0/O/Insulated%20Stainless%20Steel%20Water%20Bottles.jpg",
-  "img" => "https://www.businessgreen.com/w-images/b7c92aff-a2a4-4ea6-af49-b20b82379c89/2/creditJordiChiasPujol-580x358.png"
+  "username" =>"shrimplin",
+  "image" => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0nmL0hxXLZ_M-2fPrM3pXBmWWiy-NhaV8Y3WX-I0Vm252gzba",
+  "img" => "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2018/09/931/524/24a1276c9561e230670f6a7067008a27.jpg?ve=1&tl=1"
+})
+Tip.create({
+  "title" => "Carry reusable utensils and glass drinking straws",
+  "username" =>"roseleaf",
+  "image" => "https://thebestbrushes.com/images/products/8317.jpg",
+  "img" => "https://transform.iema.net/sites/default/files/s3/hero/web_ocean_plastic_istock-1073416938.png"
+})
+Tip.create({
+  "title" => "Shop your local farmers market",
+  "username" =>"gaius",
+  "image" => "https://icghomes.com/site/wp-content/uploads/2018/05/pexels-photo-95425-1024x682.jpeg",
+  "img" => "https://media2.s-nbcnews.com/i/MSNBC/Components/Video/__NEW/AP100215155274.jpg"
+})
+Tip.create({
+  "title" => "Wash clothes with homemade laundry soap and stain removers",
+  "username" =>"thorndale22",
+  "image" => "https://livesimply.me/wp-content/uploads/2014/02/1-homemade-liguid-laundry-soap-all-natural-5-682x1024.jpg",
+  "img" => "https://www.nationalgeographic.com/content/dam/photography/PROOF/2018/June/animals-and-plastic/animals-plastic-nationalgeographic_1230842.jpg"
+})
+Tip.create({
+  "title" => "Use a handkerchief instead of paper tissue",
+  "username" =>"larixfda",
+  "image" => "https://images.manmadediy.com/1VpkX4_bpKYatD6N_VYwB35VYTw=/800x0/filters:no_upscale()/https://assets.manmadediy.com/photos/33008/handkerchiefs-2original.jpg",
+  "img" => "https://media.nature.com/w800/magazine-assets/d41586-019-01252-0/d41586-019-01252-0_16659420.jpg"
+})
+Tip.create({
+  "title" => "Look for plastic-free shoes",
+  "username" =>"iberis09",
+  "image" => "https://images.manmadediy.com/1VpkX4_bpKYatD6N_VYwB35VYTw=/800x0/filters:no_upscale()/https://assets.manmadediy.com/photos/33008/handkerchiefs-2original.jpg",
+  "img" => "https://media.nature.com/w800/magazine-assets/d41586-019-01252-0/d41586-019-01252-0_16659420.jpg"
 })
