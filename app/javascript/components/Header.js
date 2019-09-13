@@ -25,7 +25,7 @@ class Header extends React.Component {
           {this.props.handleView('index')}}>
             SAVE THE<br/>OCEAN
         </h1>
-        <div>
+        <div className="header-btn">
           <Button className="tips-btn" variant="contained" color="primary" onClick={() =>
             {this.props.handleView('index')
 
