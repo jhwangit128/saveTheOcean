@@ -89,8 +89,8 @@ article {
 }
 .plastic-bottle {
   background: url(waterbottle.svg) no-repeat;
-  width: 10%;
-  height: 10%;
+  width: 50%;
+  height: 60px;
 }
 .main-contents {
   background: url(whale.png) no-repeat;
@@ -179,4 +179,7 @@ form {
 .container-drag {
   width: 30%;
   height: 30%;
+}
+.box {
+  color: white;
 }

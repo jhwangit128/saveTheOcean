@@ -7,7 +7,6 @@ import Header from './Header.js'
 import Main from './Main.js'
 import Footer from './Footer.js'
 import Button from '@material-ui/core/Button';
-import Whale from './Whale.js'
 
 // ++++++++++++++++++++++++++++++++++++
 // COMPONENET CLASS
