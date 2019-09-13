@@ -13,7 +13,6 @@ Tip.create({
   "image" => "https://cdn11.bigcommerce.com/s-9geauonp44/images/stencil/1024x1024/products/536/1097/PPC-TOTE-NAT-LPF_CONTEXT_500X500__71258.1543257162.png?c=2",
   "img" => "https://7b7157f59fb5914df25d-83ec9bcc8970758aaa4b1923747e8d1b.ssl.cf1.rackcdn.com/b98de714e1c2dad2b5ad6b288865c259.jpg"
 })
-
 Tip.create({
   "title" => "Get reusable stainless steel bottles",
   "username" =>"snow3man5",
@@ -51,8 +50,32 @@ Tip.create({
   "img" => "https://media.nature.com/w800/magazine-assets/d41586-019-01252-0/d41586-019-01252-0_16659420.jpg"
 })
 Tip.create({
-  "title" => "Look for plastic-free shoes",
+  "title" => "Learn strategies for green gift giving",
   "username" =>"iberis09",
-  "image" => "https://images.manmadediy.com/1VpkX4_bpKYatD6N_VYwB35VYTw=/800x0/filters:no_upscale()/https://assets.manmadediy.com/photos/33008/handkerchiefs-2original.jpg",
-  "img" => "https://media.nature.com/w800/magazine-assets/d41586-019-01252-0/d41586-019-01252-0_16659420.jpg"
+  "image" => "https://lobsterandswan.com/wp-content/uploads/2015/04/Urban-Jungle-Bloggers-April-2015-15.jpg",
+  "img" => "https://www.afdb.org/sites/default/files/styles/1700x900/public/csm_ocean-pollution-plastic_406064fb9c.jpg?itok=BCHef51_"
+})
+Tip.create({
+  "title" => "Compost food waste to avoid plastic garbage bags",
+  "username" =>"goldberry",
+  "image" => "https://i.ytimg.com/vi/sWMwP8ciecM/hqdefault.jpg",
+  "img" => "https://static1.squarespace.com/static/57d2c17d29687f368b608a50/57d2ced0579fb3d5c11664cb/5b5fe8ac758d46a989ab4dd2/1535088448573/ocean-Plastic_eartha_banner.jpg?format=2500w"
+})
+Tip.create({
+  "title" => "Throw a zero waste party",
+  "username" =>"larixfda",
+  "image" => "https://i.pinimg.com/originals/49/9c/a4/499ca4b73170c87e4f6841e5bdf2a97a.jpg",
+  "img" => "https://cdn.iflscience.com/images/a7ca41fb-1ea2-5c1c-8b57-7ede1b6d09f4/default-1521631774-cover-image.jpg"
+})
+Tip.create({
+  "title" => "Opt for a real, sustainably-grown and harvested tree, a live tree that can be planted, or an artificial tree made from natural materials",
+  "username" =>"thorndale22",
+  "image" => "https://easytreezy.com/wp-content/uploads/2018/09/easy-treezy-natural-pre-lit-artificial-christmas-tree-led-lights-510x510.jpg",
+  "img" => "https://www.wwf.org.au/images/useruploadedimages/676/iload3911___medium.jpg"
+})
+Tip.create({
+  "title" => "Get off mailing lists to avoid plastic envelope windows",
+  "username" =>"skylar11",
+  "image" => "https://img-aws.ehowcdn.com/750x428p/photos.demandstudios.com/getty/article/139/127/139908569.jpg",
+  "img" => "https://static.standard.co.uk/s3fs-public/thumbnails/image/2019/01/30/16/grey-seal-pup-plastic-credit-matt-carter.jpg?width=1368&height=912&fit=bounds&format=pjpg&auto=webp&quality=70"
 })

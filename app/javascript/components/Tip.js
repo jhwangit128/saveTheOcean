@@ -35,9 +35,6 @@ class Tip extends React.Component {
               <Typography gutterBottom variant="h5" component="h2">
                 {this.props.tip.title}
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                {this.props.tip.body}
-              </Typography>
             </CardContent>
           </CardActionArea>
           <CardActions>

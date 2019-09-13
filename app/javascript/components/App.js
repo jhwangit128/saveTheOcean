@@ -26,7 +26,6 @@ class App extends React.Component {
         title: null,
         username: null,
         image: null,
-        body: null,
         id: null
       }
     }
@@ -41,7 +40,6 @@ class App extends React.Component {
       title: '',
       username: '',
       image: '',
-      body: '',
       id: null
     }
 
@@ -61,7 +59,6 @@ class App extends React.Component {
           title: tip.title,
           username: tip.username,
           image: tip.image,
-          body: tip.body,
           id: tip.id
         }
         break

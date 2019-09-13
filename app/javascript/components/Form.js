@@ -17,7 +17,6 @@ class Form extends React.Component {
       title: '',
       username: '',
       image: '',
-      body: '',
       id: null
     }
   }
@@ -40,7 +39,6 @@ class Form extends React.Component {
         title: this.state.title,
         username: this.state.username,
         image: this.state.image,
-        body: this.state.body,
         id: this.state.id
       }
     if(this.props.view.page === 'addTip') {
@@ -52,7 +50,6 @@ class Form extends React.Component {
       title: "",
       username: "",
       image:"",
-      body: "",
       id: null
     })
   } else {
@@ -60,7 +57,7 @@ class Form extends React.Component {
   }
 }
   checkFields = () => {
-  if (this.state.title && this.state.username && this.state.body && this.state.image){
+  if (this.state.title && this.state.username && this.state.image){
     return true
   } else {
     return false
@@ -74,7 +71,6 @@ class Form extends React.Component {
       title: this.props.formInputs.title,
       username: this.props.formInputs.username,
       image: this.props.formInputs.image,
-      body: this.props.formInputs.body,
       id: this.props.formInputs.id
      })
   }
@@ -85,7 +81,6 @@ class Form extends React.Component {
         title: this.props.formInputs.title,
         username: this.props.formInputs.username,
         image: this.props.formInputs.image,
-        body: this.props.formInputs.body,
         id: this.props.formInputs.id
       })
     }
@@ -109,10 +104,6 @@ class Form extends React.Component {
         <label>
           image
           <input type="text" placeholder="image" id="image" value={this.state.image} onChange={this.handleChange}/>
-        </label>
-        <label>
-          body
-          <textarea placeholder="tip" id="body" value={this.state.body} onChange={this.handleChange}></textarea>
         </label><br /><br />
         <input type="submit" value="Submit" />
       </form>

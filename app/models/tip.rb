@@ -18,7 +18,7 @@ class Tip
         title: result["title"],
         username: result["username"],
         image: result["image"],
-        body: result["body"]
+        img: result["img"]
       }
     end
   end
@@ -32,7 +32,7 @@ class Tip
         title: results.first["title"],
         username: results.first["username"],
         image: results.first["image"],
-        body: results.first["body"]
+        img: results.first["img"]
       }
     else
       return {
@@ -45,9 +45,9 @@ class Tip
   def self.create(opts)
     results = DB.exec(
       <<-SQL
-        INSERT INTO tips (title, username, image, body)
-        VALUES ('#{opts["title"]}', '#{opts["username"]}', '#{opts["image"]}', '#{opts["body"]}')
-        RETURNING id, title, username, image, body;
+        INSERT INTO tips (title, username, image, img)
+        VALUES ('#{opts["title"]}', '#{opts["username"]}', '#{opts["image"]}', '#{opts["img"]}')
+        RETURNING id, title, username, image, img;
       SQL
     )
     result = results.first
@@ -56,7 +56,7 @@ class Tip
       title: result["title"],
       username: result["username"],
       image: result["image"],
-      body: result["body"]
+      img: result["img"]
     }
   end
 
@@ -73,9 +73,9 @@ class Tip
           title='#{opts["title"]}',
           username='#{opts["username"]}',
           image='#{opts["image"]}',
-          body='#{opts["body"]}'
+          img='#{opts["img"]}'
         WHERE id=#{id}
-        RETURNING id, title, username, image, body;
+        RETURNING id, title, username, image, img;
       SQL
     )
     result = results.first
@@ -84,7 +84,7 @@ class Tip
       title: result["title"],
       username: result["username"],
       image: result["image"],
-      body: result["body"]
+      img: result["img"]
     }
   end
 
