@@ -126,7 +126,6 @@ class Main extends React.Component {
               />
           }
           <div className="info-text">
-
             WORLD WIDE
             <CountUp start={0} end={500000000000}>
               {({ countUpRef, start }) => (

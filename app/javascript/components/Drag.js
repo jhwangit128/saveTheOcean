@@ -86,6 +86,10 @@ class Drag extends React.Component {
             <div className="box plastic-bottle"></div>
           </Draggable>
           </div>
+          <div className="plastic-container">
+            <div className="plastic-bottle-fill">
+            </div>
+          </div>
         </div>
       );
     }

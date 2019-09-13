@@ -96,6 +96,7 @@ class App extends React.Component {
           <div className="wave"></div>
           <div className="wave"></div>
         </div>
+        <Footer />
       </div>
     )
   }

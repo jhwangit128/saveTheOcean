@@ -92,6 +92,16 @@ article {
   width: 50%;
   height: 60px;
 }
+.plastic-container{
+  width: 100%;
+  left: 200;
+}
+.plastic-bottle-fill {
+  background: url(waterbottlefill.svg) no-repeat;
+  width: 50%;
+  height: 60px;
+  position:
+}
 .main-contents {
   background: url(whale.png) no-repeat;
   background-size: contain;
@@ -182,4 +192,35 @@ form {
 }
 .box {
   color: white;
+}
+.hover {
+  display: none;
+  color: white;
+}
+.hover:hover {
+  display: block;
+}
+
+/* ++++++++++++++++ */
+/*      FOOTER      */
+/* ++++++++++++++++ */
+footer {
+  z-index: 2;
+  position: relative;
+  text-align: center;
+  font-size: 12px;
+  bottom:0;
+  left:0;
+  width:200%;
+  height: 100px;
+  color: white;
+}
+.footer-names {
+  background: var(--gray);
+  padding: 20px 0;
+}
+.copy {
+  background: var(--woodsmoke);
+  height: 15px;
+  padding: 15px 0;
 }
