@@ -75,7 +75,6 @@ class Drag extends React.Component {
       return (
         <div>
           <div>
-          <p>Active DragHandlers: {this.state.activeDrags}</p>
           <Draggable defaultPosition={{x: 25, y: 25}} {...dragHandlers}>
             <div className="box plastic-bottle"></div>
           </Draggable>
