@@ -24,6 +24,17 @@ class Drag extends React.Component {
       });
     };
 
+    handleMouseHover = () => {
+      this.setState(this.toggleHoverState)
+    }
+
+    toggleHoverState = () => {
+      return {
+        isHovering: !state.isHovering
+      }
+    }
+
+
     onStart = () => {
       this.setState({activeDrags: ++this.state.activeDrags});
     };
@@ -63,6 +74,7 @@ class Drag extends React.Component {
       const {deltaPosition, controlledPosition} = this.state;
       return (
         <div>
+          <div>
           <p>Active DragHandlers: {this.state.activeDrags}</p>
           <Draggable defaultPosition={{x: 25, y: 25}} {...dragHandlers}>
             <div className="box plastic-bottle"></div>
@@ -73,6 +85,7 @@ class Drag extends React.Component {
           <Draggable {...dragHandlers}>
             <div className="box plastic-bottle"></div>
           </Draggable>
+          </div>
         </div>
       );
     }

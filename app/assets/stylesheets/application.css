@@ -1,7 +1,7 @@
 /* ++++++++++++++++ */
 /*      FONTS       */
 /* ++++++++++++++++ */
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Gamja+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Abel&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 /* ++++++++++++++++ */
@@ -9,8 +9,8 @@
 /* ++++++++++++++++ */
 :root {
   /*FONTS*/
-  --main-font: 'Roboto';
-  --logo-font: 'Gamja Flower';
+  --main-font: 'Abel';
+  /* --logo-font: 'Gamja Flower'; */
   /* --accent-font: 'Monda'; */
   /*COLOR*/
   --woodsmoke: #0B0C10;
