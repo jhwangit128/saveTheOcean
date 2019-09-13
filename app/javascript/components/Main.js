@@ -107,8 +107,8 @@ class Main extends React.Component {
     return (
       <main>
         <div className="main-contents">
+        <h1>{this.props.view.pageTitle}</h1>
           <div className="cards-form">
-            <h1>{this.props.view.pageTitle}</h1>
             { this.props.view.page === 'index'
               ? this.state.tips.map(tip => (
 
