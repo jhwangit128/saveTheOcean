@@ -4,6 +4,7 @@
 // packages & components
 import React from 'react'
 import CountUp from 'react-countup'
+import Show from './Show.js'
 import Tip from './Tip.js'
 import Form from './Form.js'
 import Drag from './Drag.js'
@@ -102,29 +103,31 @@ class Main extends React.Component {
   // RENDER
   // ++++++++++++
   render () {
+    const child = { width: `300em`, height: `100%`}
     return (
       <main>
-
         <div className="main-contents">
-          <h1>{this.props.view.pageTitle}</h1>
-          { this.props.view.page === 'index'
-            ? this.state.tips.map(tip => (
+          <div className="cards-form">
+            <h1>{this.props.view.pageTitle}</h1>
+            { this.props.view.page === 'index'
+              ? this.state.tips.map(tip => (
 
-              <Tip
-                key={tip.id}
-                tip={tip}
-                handleView={this.props.handleView}
-                handleDelete={this.deleteTip}
+                <Tip
+                  key={tip.id}
+                  tip={tip}
+                  handleView={this.props.handleView}
+                  handleDelete={this.deleteTip}
 
-              />
-            ))
-            : <Form
-                handleAdd={this.addTip}
-                handleUpdate={this.updateTip}
-                formInputs={this.props.formInputs}
-                view={this.props.view}
-              />
-          }
+                />
+              ))
+              : <Form
+                  handleAdd={this.addTip}
+                  handleUpdate={this.updateTip}
+                  formInputs={this.props.formInputs}
+                  view={this.props.view}
+                />
+            }
+          </div>
           <div className="info-text">
             WORLD WIDE
             <CountUp start={0} end={500000000000}>
@@ -138,8 +141,7 @@ class Main extends React.Component {
           </div>
           <Drag />
 
-
-        </div>
+      </div>
       </main>
     )
   }

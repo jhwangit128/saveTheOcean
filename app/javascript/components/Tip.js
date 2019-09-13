@@ -27,7 +27,7 @@ class Tip extends React.Component {
         <Card className="card" style={{maxWidth: 345}}>
           <CardActionArea>
             <CardMedia
-              style={{height: 140}}
+              style={{height: 240}}
               image={this.props.tip.image}
               title={this.props.tip.username}
             />
