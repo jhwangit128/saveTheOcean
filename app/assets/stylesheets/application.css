@@ -25,7 +25,7 @@
 /* ++++++++++++++ */
 /*    GENERAL     */
 /* ++++++++++++++ */
-* { border: 1px solid gold; }
+/* * { border: 1px solid gold; } */
 body {
   width: 100%;
   font-family: var(--main-font);
@@ -44,14 +44,27 @@ header {
   justify-content: space-between;
   overflow: hidden;
 }
-header > h1 {
+header  h1 {
   font-family: var(--logo-font);
   font-size: 2em;
+  line-height: 1em;
 }
 .header-btn {
   margin-top: 100px;
   margin-right: 50px;
 }
+.logo {
+  width: 85px;
+  height: 85px;
+  margin-top: 30px;
+  background-color: #00eaff;
+  border-radius: 50%;
+  border-top-right-radius: 0;
+  transform: rotate(-45deg);
+  float: left;
+  margin-left: 20px;
+}
+
 /* +++++++++++++++++++ */
 /*   WAVES ANIMATION   */
 /* +++++++++++++++++++ */
@@ -154,6 +167,7 @@ main h1 {
   overflow-y:hidden;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .container-drag {
   width: 30%;
@@ -176,7 +190,7 @@ main h1 {
 /* TEXT */
 .info-text {
   width: 1356px;
-  height: 500px;
+  height: 550px;
   text-align: center;
   margin-top: 155px;
   color: white;
@@ -223,7 +237,17 @@ article {
 /* +++++++++++++++ */
 .images-container {
   width: 1356px;
-  height: 500px;
+  height: 550px;
+  display: flex;
+  flex-direction: row;
+  overflow-y: scroll;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.images {
+  width: 50%;
+  margin: 0 auto;
 }
 
 /* +++++++++++++++ */
@@ -231,7 +255,7 @@ article {
 /* +++++++++++++++ */
 .cards-form {
   width: 1356px;
-  height: 500px;
+  height: 550px;
   left: 400;
   top: 200;
   overflow-y: scroll;

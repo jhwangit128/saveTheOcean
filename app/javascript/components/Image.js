@@ -15,34 +15,18 @@ import Typography from '@material-ui/core/Typography';
 // ++++++++++++++++++++++++++++++++++++
 // COMPONENET CLASS
 // ++++++++++++++++++++++++++++++++++++
-class Tip extends React.Component {
+class Image extends React.Component {
   // ++++++++++++
   // RENDER
   // ++++++++++++
   render () {
     return (
-      <div className="card-container">
-        <Card className="card" style={{maxWidth: 345}}>
-          <CardActionArea>
+      <div className="image-container">
+        <Card className="image" style={{maxWidth: 445}}>
             <CardMedia
-              style={{height: 240}}
-              image={this.props.tip.image}
-              title={this.props.tip.username}
+              style={{height: 340}}
+              image={this.props.tip.img}
             />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                {this.props.tip.title}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-                 <Button size="small" color="primary" onClick={() =>
-                    {this.props.handleView('editTip', this.props.tip)}}>
-                    edit tip</Button>
-                 <Button size="small" color="primary" onClick={() =>
-                    {this.props.handleDelete(this.props.tip.id)
-                 }}>delete tip</Button>
-          </CardActions>
         </Card>
       </div>
     )
@@ -52,4 +36,4 @@ class Tip extends React.Component {
 // ++++++++++++++++++++++++++++++++++++
 // EXPORT
 // ++++++++++++++++++++++++++++++++++++
-export default Tip
+export default Image

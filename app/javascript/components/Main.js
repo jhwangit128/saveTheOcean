@@ -6,6 +6,7 @@ import React from 'react'
 import CountUp from 'react-countup'
 import Show from './Show.js'
 import Tip from './Tip.js'
+import Image from './Image.js'
 import Form from './Form.js'
 import Drag from './Drag.js'
 
@@ -121,7 +122,14 @@ class Main extends React.Component {
             <Drag />
           </div>
           <div className="images-container">
-
+            <div className="images">
+              {this.state.tips.map(tip => (
+                <Image
+                  key={tip.id}
+                  tip={tip}
+                  />
+              ))}
+            </div>
           </div>
           <div className="cards-form">
             { this.props.view.page === 'index'
