@@ -10,11 +10,10 @@ class Footer extends React.Component {
   render () {
     return (
       <footer className="footer" >
-            <div className="footer-names">
-              <i className='fa fa-trophy'></i>
-              <span>&nbsp;&nbsp;Jiha Hwang</span><br />
+            <div className="footer-items">
+              <span>Jiha Hwang</span>
+              <span className="copy">© 2019 Copyright</span>
             </div>
-            <div className="copy">© 2019 Copyright</div>
       </footer>
     )
   }

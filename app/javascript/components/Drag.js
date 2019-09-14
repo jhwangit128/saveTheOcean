@@ -1,7 +1,13 @@
+// ++++++++++++++++++++++++++++++++++++
+// DEPENDENCIES
+// ++++++++++++++++++++++++++++++++++++
+// packages & components
 import React from 'react'
 import Draggable from 'react-draggable'
 
-
+// ++++++++++++++++++++++++++++++++++++
+// COMPONENET CLASS
+// ++++++++++++++++++++++++++++++++++++
 class Drag extends React.Component {
 
   state = {
@@ -75,15 +81,15 @@ class Drag extends React.Component {
       return (
         <div>
           <div>
-          <Draggable defaultPosition={{x: 25, y: 25}} {...dragHandlers}>
-            <div className="box plastic-bottle"></div>
-          </Draggable>
-          <Draggable {...dragHandlers}>
-            <div className="box plastic-bottle"></div>
-          </Draggable>
-          <Draggable {...dragHandlers}>
-            <div className="box plastic-bottle"></div>
-          </Draggable>
+            <Draggable defaultPosition={{x: 50, y: 1}} {...dragHandlers}>
+              <div className="box plastic-bottle-r"></div>
+            </Draggable>
+            <Draggable defaultPosition={{x: 25, y: 25}} {...dragHandlers}>
+              <div className="box plastic-bottle"></div>
+            </Draggable>
+            <Draggable defaultPosition={{x: 25, y: 25}}  {...dragHandlers}>
+              <div className="box plastic-bottle"></div>
+            </Draggable>
           </div>
           <div className="plastic-container">
             <div className="plastic-bottle-fill">

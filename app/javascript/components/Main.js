@@ -3,12 +3,12 @@
 // ++++++++++++++++++++++++++++++++++++
 // packages & components
 import React from 'react'
-import CountUp from 'react-countup'
 import Show from './Show.js'
 import Tip from './Tip.js'
 import Image from './Image.js'
 import Form from './Form.js'
 import Drag from './Drag.js'
+import Text from './Text.js'
 
 // ++++++++++++++++++++++++++++++++++++
 // COMPONENET CLASS
@@ -110,16 +110,8 @@ class Main extends React.Component {
         <div className="main-contents">
           {/*<h1>{this.props.view.pageTitle}</h1>*/}
           <div className="info-text">
-            WORLD WIDE
-            <CountUp start={0} end={500000000000}>
-              {({ countUpRef, start }) => (
-                <div>
-                  <span ref={countUpRef} />
-                  <button onClick={start}>Start</button>
-                </div>
-              )}
-            </CountUp>
             <Drag />
+            <Text />
           </div>
           <div className="images-container">
             <div className="images">
@@ -155,7 +147,6 @@ class Main extends React.Component {
       </main>
     )
   }
-
 }
 
 // ++++++++++++++++++++++++++++++++++++
