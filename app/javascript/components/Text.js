@@ -14,7 +14,7 @@ class Text extends React.Component {
   // ++++++++++++
   render () {
     return (
-      <div>
+      <div className="text">
         WORLD WIDE
         <CountUp start={0} end={500000000000}>
           {({ countUpRef, start }) => (

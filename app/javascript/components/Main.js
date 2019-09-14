@@ -114,6 +114,8 @@ class Main extends React.Component {
             <Text />
           </div>
           <div className="images-container">
+            <p>In the ocean, plastic pollution impacts sea turtles, whales, seabirds, fish, coral reefs, and countless other marine species and habitats. In fact, scientists estimate that more than half of the world’s sea turtles and nearly every seabird on Earth have eaten plastic in their lifetimes.
+            </p>
             <div className="images">
               {this.state.tips.map(tip => (
                 <Image

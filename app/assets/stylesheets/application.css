@@ -27,7 +27,6 @@
 /* ++++++++++++++ */
 /* * { border: 1px solid gold; } */
 body {
-  width: 100%;
   font-family: var(--main-font);
   margin: 0;
   color: white;
@@ -150,10 +149,11 @@ main h1 {
   position: sticky;
 }
 .container {
-  width: 4070px;
+  width: 3600px;
 }
 .main-container {
-  height: 700px;
+  margin-top: 60px;
+  height: 706px;
   padding: 0 50px;
   background-color: var(--cerulean);
   scroll-snap-type: x mandatory;
@@ -192,7 +192,6 @@ main h1 {
   width: 1356px;
   height: 550px;
   text-align: center;
-  margin-top: 155px;
   color: white;
   font-size: 3em;
 }
@@ -206,7 +205,9 @@ article {
 .add-tip-btn {
   float:right;
 }
+.text {
 
+}
 /* PLASTIC BOTTLE */
 .plastic-bottles {
   width: 500px;
@@ -245,16 +246,22 @@ article {
   height: 550px;
   display: flex;
   flex-direction: row;
-  overflow-y: scroll;
+
   background-color: rgba(255, 255, 255, 0.3);
-  margin: 0 auto;
+  /* margin: 0 auto; */
   border-radius: 5px;
 }
 .images {
   width: 50%;
-  margin: 0 auto;
+  overflow-y: scroll;
 }
+.images-container > p {
+  width: 360px;
+  font-size: 2em;
+  text-align: left;
+  padding: 20px 30px 0 30px;
 
+}
 /* +++++++++++++++ */
 /*      CARDS      */
 /* +++++++++++++++ */
@@ -263,16 +270,19 @@ article {
   height: 550px;
   left: 400;
   top: 200;
-  overflow-y: scroll;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
   float:right;
   z-index: 100
 }
-/* .cards-form, form {
-  float: right;
-} */
+.card-container {
+  width: 100%;
+ overflow-y: scroll;
+ display: flex;
+ flex-flow: wrap;
+}
 .card {
+  width: 30%;
   margin: 0 auto;
 }
 
@@ -307,7 +317,7 @@ footer {
 .footer-items {
   display: flex;
   flex-direction: row;
-
+  margin: 10px 0 20px 20px;
 }
 .App {
   width: 500px;

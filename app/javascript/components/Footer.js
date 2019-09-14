@@ -11,8 +11,8 @@ class Footer extends React.Component {
     return (
       <footer className="footer" >
             <div className="footer-items">
-              <span>Jiha Hwang</span>
-              <span className="copy">© 2019 Copyright</span>
+              <span>JIHA HWANG</span>
+              <span className="copy">© 2019 COPYRIGHT</span>
             </div>
       </footer>
     )

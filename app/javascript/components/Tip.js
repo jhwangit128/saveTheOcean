@@ -21,7 +21,6 @@ class Tip extends React.Component {
   // ++++++++++++
   render () {
     return (
-      <div className="card-container">
         <Card className="card" style={{maxWidth: 345}}>
           <CardActionArea>
             <CardMedia
@@ -44,7 +43,6 @@ class Tip extends React.Component {
                  }}>delete tip</Button>
           </CardActions>
         </Card>
-      </div>
     )
   }
 }
