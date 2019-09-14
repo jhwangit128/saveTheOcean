@@ -7,9 +7,10 @@ import Show from './Show.js'
 import Tip from './Tip.js'
 import Image from './Image.js'
 import Form from './Form.js'
-import Drag from './Drag.js'
+import DragBottle from './DragBottle.js'
+import DragBag from './DragBag.js'
 import Text from './Text.js'
-
+import TextBag from './TextBag.js'
 // ++++++++++++++++++++++++++++++++++++
 // COMPONENET CLASS
 // ++++++++++++++++++++++++++++++++++++
@@ -18,10 +19,11 @@ class Main extends React.Component {
   // STATE
   // ++++++++++++
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      tips: []
-    }
+      tips: [],
+      isHovering: false,
+    };
   }
 
   // ++++++++++++
@@ -92,6 +94,18 @@ class Main extends React.Component {
       .catch(err => console.log(err))
   }
 
+  handleMouseHover = () => {
+    this.setState(this.toggleHoverState)
+  }
+  toggleHoverState = (state) => {
+    return {
+      isHovering: !state.isHovering,
+    }
+  }
+
+  handleDrag = (drag, item) => {
+
+  }
 
   // ++++++++++++++
   // LIFE CYCLES
@@ -108,10 +122,22 @@ class Main extends React.Component {
     return (
       <main>
         <div className="main-contents">
-          {/*<h1>{this.props.view.pageTitle}</h1>*/}
           <div className="info-text">
-            <Drag />
-            <Text />
+            <div>
+              <div className="bottles" onMouseEnter={this.handleMouseHover}
+                onMouseLeave={this.handleMouseHover}>
+                <DragBottle/>
+              </div>
+              {this.state.isHovering && <div className="bottle-text"><Text/></div>}
+            </div>
+            <div>
+              <div className="bags"
+              onMouseEnter={this.handleMouseHover}
+                onMouseLeave={this.handleMouseHover}>
+                <DragBag/>
+              </div>
+              {this.state.isHovering && <div className="bag-text"><TextBag/></div>}
+              </div>
           </div>
           <div className="images-container">
             <p>In the ocean, plastic pollution impacts sea turtles, whales, seabirds, fish, coral reefs, and countless other marine species and habitats. In fact, scientists estimate that more than half of the world’s sea turtles and nearly every seabird on Earth have eaten plastic in their lifetimes.

@@ -4,11 +4,11 @@
 // packages & components
 import React from 'react'
 import Draggable from 'react-draggable'
-
+import Text from './Text.js'
 // ++++++++++++++++++++++++++++++++++++
 // COMPONENET CLASS
 // ++++++++++++++++++++++++++++++++++++
-class Drag extends React.Component {
+class DragBottle extends React.Component {
 
   state = {
       activeDrags: 0,
@@ -79,22 +79,16 @@ class Drag extends React.Component {
       const dragHandlers = {onStart: this.onStart, onStop: this.onStop};
       const {deltaPosition, controlledPosition} = this.state;
       return (
-        <div>
-          <div>
-            <Draggable defaultPosition={{x: 50, y: 1}} {...dragHandlers}>
-              <div className="box plastic-bottle-r"></div>
-            </Draggable>
-            <Draggable defaultPosition={{x: 25, y: 25}} {...dragHandlers}>
-              <div className="box plastic-bottle"></div>
-            </Draggable>
-            <Draggable defaultPosition={{x: 25, y: 25}}  {...dragHandlers}>
-              <div className="box plastic-bottle"></div>
-            </Draggable>
-          </div>
-          <div className="plastic-container">
-            <div className="plastic-bottle-fill">
-            </div>
-          </div>
+        <div className="bottles-container">
+          <Draggable {...dragHandlers}>
+            <div className="box plastic-bottle"></div>
+          </Draggable>
+          <Draggable {...dragHandlers}>
+            <div className="box plastic-bottle"></div>
+          </Draggable>
+          <Draggable {...dragHandlers}>
+            <div className="box plastic-bottle"></div>
+          </Draggable>
         </div>
       );
     }
@@ -103,4 +97,4 @@ class Drag extends React.Component {
 
 
 
-export default Drag
+export default DragBottle

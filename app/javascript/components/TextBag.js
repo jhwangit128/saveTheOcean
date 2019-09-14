@@ -14,15 +14,9 @@ class Text extends React.Component {
   // ++++++++++++
   render () {
     return (
-      <div className="text">
-        WORLD WIDE, OVER&nbsp;
-        <CountUp delay={1} end={500000000000}>
-          {/*{({ countUpRef, start }) => (
-            <div>
-              <span ref={countUpRef} />
-              <button onClick={start}>Start</button>
-            </div>
-          )}*/}
+      <div className="text-bag">
+        WORLD WIDE, UP TO&nbsp;
+        <CountUp delay={1} end={1000000000000}>
         </CountUp>
         &nbsp;PLASTIC BOTTLES USED EVERY YEAR
       </div>

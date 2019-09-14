@@ -25,7 +25,7 @@
 /* ++++++++++++++ */
 /*    GENERAL     */
 /* ++++++++++++++ */
-/* * { border: 1px solid gold; } */
+* { border: 1px solid gold; }
 body {
   font-family: var(--main-font);
   margin: 0;
@@ -194,6 +194,8 @@ main h1 {
   text-align: center;
   color: white;
   font-size: 3em;
+  display: flex;
+  flex-direction: row;
 }
 article {
   width: 100%;
@@ -205,37 +207,47 @@ article {
 .add-tip-btn {
   float:right;
 }
-.text {
-
+.bottle-text, .text {
+  width: 300px;
+  height: 300px;
+  margin-top: 50px;
+  text-align: left;
 }
-/* PLASTIC BOTTLE */
-.plastic-bottles {
-  width: 500px;
-  height: 100%;
+/* PLASTIC BAG */
+.plastic-bag {
+  background: url(bag.svg) no-repeat;
+  width: 60px;
+  height: 60px;
+}
+.bags {
+  margin: 420px 0 0 240px;
+  width: 200px;
+  height: 80px;
+}
+.bags-container {
+  width: 200px;
+  height: 80px;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  margin-left: 100px;
+  justify-content: space-between;
 }
+/* PLASTIC BOTTLE */
 .plastic-bottle {
   background: url(waterbottle.svg) no-repeat;
-  width: 50%;
+  width: 30px;
   height: 60px;
 }
-.plastic-bottle-r {
-  background: url(waterbottle.svg) no-repeat;
-  transform: rotate(20deg);
-  width: 50%;
-  height: 60px;
+.bottles {
+  margin: 400px 0 0 440px;
+  width: 130px;
+  height: 80px;
 }
-.plastic-container{
-  width: 100%;
-  left: 200;
-}
-.plastic-bottle-fill {
-  background: url(waterbottlefill.svg) no-repeat;
-  width: 50%;
-  height: 60px;
+.bottles-container {
+  width: 130px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 /* +++++++++++++++ */
@@ -246,7 +258,6 @@ article {
   height: 550px;
   display: flex;
   flex-direction: row;
-
   background-color: rgba(255, 255, 255, 0.3);
   /* margin: 0 auto; */
   border-radius: 5px;
