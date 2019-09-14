@@ -92,21 +92,27 @@ class Form extends React.Component {
   render () {
     return (
       <div className="form-container">
-      <form className="form" onSubmit={this.handleSubmit}>
-        <label>
-          title
-          <input type="text" placeholder="title" id="title" value={this.state.title} onChange={this.handleChange}/>
-        </label>
-        <label>
-          username
-          <input type="text" placeholder="username" id="username" value={this.state.username} onChange={this.handleChange}/>
-        </label>
-        <label>
-          image
-          <input type="text" placeholder="image" id="image" value={this.state.image} onChange={this.handleChange}/>
-        </label><br /><br />
-        <input type="submit" value="Submit" />
-      </form>
+        <form className="form" onSubmit={this.handleSubmit}>
+          <h1>
+            {this.props.view.page === "addTip"
+            ? "Add a tip" : "Edit a tip"}
+          </h1>
+          <div className="form-input-container">
+            <label>
+              title
+              <input type="text" placeholder="title" id="title" value={this.state.title} onChange={this.handleChange}/>
+            </label>
+            <label>
+              username
+              <input type="text" placeholder="username" id="username" value={this.state.username} onChange={this.handleChange}/>
+            </label>
+            <label>
+              image
+              <input type="text" placeholder="image" id="image" value={this.state.image} onChange={this.handleChange}/>
+            </label><br /><br />
+          </div>
+          <input type="submit" value="Submit" />
+        </form>
       </div>
     )
   }

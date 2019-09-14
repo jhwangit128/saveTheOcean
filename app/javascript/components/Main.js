@@ -107,7 +107,22 @@ class Main extends React.Component {
     return (
       <main>
         <div className="main-contents">
-        <h1>{this.props.view.pageTitle}</h1>
+          {/*<h1>{this.props.view.pageTitle}</h1>*/}
+          <div className="info-text">
+            WORLD WIDE
+            <CountUp start={0} end={500000000000}>
+              {({ countUpRef, start }) => (
+                <div>
+                  <span ref={countUpRef} />
+                  <button onClick={start}>Start</button>
+                </div>
+              )}
+            </CountUp>
+            <Drag />
+          </div>
+          <div className="images-container">
+
+          </div>
           <div className="cards-form">
             { this.props.view.page === 'index'
               ? this.state.tips.map(tip => (
@@ -128,20 +143,7 @@ class Main extends React.Component {
                 />
             }
           </div>
-          <div className="info-text">
-            WORLD WIDE
-            <CountUp start={0} end={500000000000}>
-              {({ countUpRef, start }) => (
-                <div>
-                  <span ref={countUpRef} />
-                  <button onClick={start}>Start</button>
-                </div>
-              )}
-            </CountUp>
-          </div>
-          <Drag />
-
-      </div>
+        </div>
       </main>
     )
   }

@@ -128,10 +128,55 @@ header > h1 {
 }
 
 /* ++++++++++++++++++ */
+/*        MAIN        */
+/* ++++++++++++++++++ */
+main h1 {
+  color: var(--rich-electric-blue);
+  text-transform: uppercase;
+  margin-left: 30px;
+  position: sticky;
+}
+.container {
+  width: 4070px;
+}
+.main-container {
+  height: 600px;
+  padding: 0 50px;
+  background-color: var(--cerulean);
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  /* display: flex; */
+}
+.main-contents {
+  background: url(whale.png) no-repeat;
+  background-size: contain;
+  overflow-x: auto;
+  overflow-y:hidden;
+  display: flex;
+  flex-direction: row;
+}
+.container-drag {
+  width: 30%;
+  height: 30%;
+}
+.box {
+  color: white;
+}
+.hover {
+  display: none;
+  color: white;
+}
+.hover:hover {
+  display: block;
+}
+
+/* ++++++++++++++++++ */
 /*    INFOGRAPHIC     */
 /* ++++++++++++++++++ */
 /* TEXT */
 .info-text {
+  width: 1356px;
+  height: 500px;
   text-align: center;
   margin-top: 155px;
   color: white;
@@ -173,58 +218,26 @@ article {
   position:
 }
 
-/* ++++++++++++++++++ */
-/*        MAIN        */
-/* ++++++++++++++++++ */
-main h1 {
-  color: var(--rich-electric-blue);
-  text-transform: uppercase;
-  margin-left: 30px;
-  position: sticky;
-}
-.container {
-  width: 140%;
-}
-.main-container {
-  padding: 0 50px;
-  background-color: var(--cerulean);
-  scroll-snap-type: x mandatory;
-  overflow-x: scroll;
-  /* display: flex; */
-}
-.main-contents {
-  background: url(whale.png) no-repeat;
-  background-size: contain;
-  height: 800px;
-  overflow-x: auto;
-  overflow-y:hidden;
-}
-.container-drag {
-  width: 30%;
-  height: 30%;
-}
-.box {
-  color: white;
-}
-.hover {
-  display: none;
-  color: white;
-}
-.hover:hover {
-  display: block;
+/* +++++++++++++++ */
+/*     IMAGES      */
+/* +++++++++++++++ */
+.images-container {
+  width: 1356px;
+  height: 500px;
 }
 
 /* +++++++++++++++ */
 /*      CARDS      */
 /* +++++++++++++++ */
 .cards-form {
-  height: 600px;
-  width: 900px;
-  margin: 0 850px 500px 3600px;
+  width: 1356px;
+  height: 500px;
+  left: 400;
+  top: 200;
   overflow-y: scroll;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
-  /* float:right; */
+  float:right;
   z-index: 100
 }
 /* .cards-form, form {
