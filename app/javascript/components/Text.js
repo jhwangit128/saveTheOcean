@@ -15,15 +15,15 @@ class Text extends React.Component {
   render () {
     return (
       <div className="text">
-        WORLD WIDE, OVER&nbsp;
-        <CountUp delay={1} end={500000000000}>
+        WORLD WIDE, OVER&nbsp;<br />
+        <CountUp className="number" delay={1} end={500000000000}>
           {/*{({ countUpRef, start }) => (
             <div>
               <span ref={countUpRef} />
               <button onClick={start}>Start</button>
             </div>
           )}*/}
-        </CountUp>
+        </CountUp><br />
         &nbsp;PLASTIC BOTTLES USED EVERY YEAR
       </div>
     )

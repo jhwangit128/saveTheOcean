@@ -207,29 +207,14 @@ article {
 .add-tip-btn {
   float:right;
 }
-.bottle-text, .text {
-  width: 300px;
-  height: 300px;
-  margin-top: 50px;
+.bottle-text {
+  margin: 120px 0 0 40px;
+  width: 400px;
   text-align: left;
+  font-size: 0.9em;
 }
-/* PLASTIC BAG */
-.plastic-bag {
-  background: url(bag.svg) no-repeat;
-  width: 60px;
-  height: 60px;
-}
-.bags {
-  margin: 420px 0 0 240px;
-  width: 200px;
-  height: 80px;
-}
-.bags-container {
-  width: 200px;
-  height: 80px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.number {
+  color: red;
 }
 /* PLASTIC BOTTLE */
 .plastic-bottle {
@@ -238,13 +223,13 @@ article {
   height: 60px;
 }
 .bottles {
-  margin: 400px 0 0 440px;
-  width: 130px;
-  height: 80px;
+  margin: 200px 0 0 440px;
+  width: 150px;
+  height: 100px;
 }
 .bottles-container {
-  width: 130px;
-  height: 80px;
+  width: 150px;
+  height: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
