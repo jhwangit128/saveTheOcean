@@ -9,6 +9,8 @@ import Image from './Image.js'
 import Form from './Form.js'
 import DragBottle from './DragBottle.js'
 import Text from './Text.js'
+import DragBag from './DragBag.js'
+import TextBag from './TextBag.js'
 
 // ++++++++++++++++++++++++++++++++++++
 // COMPONENET CLASS
@@ -123,6 +125,13 @@ class Main extends React.Component {
               <DragBottle/>
             </div>
             {this.state.isHovering && <div><Text/></div>}
+          </div>
+          <div className="bag-text">
+            <div className="bags" onMouseEnter={this.handleMouseHover}
+              onMouseLeave={this.handleMouseHover}>
+              <DragBag/>
+            </div>
+            {this.state.isHovering && <div><TextBag/></div>}
           </div>
           <div className="images-container">
             <p>In the ocean, plastic pollution impacts sea turtles, whales, seabirds, fish, coral reefs, and countless other marine species and habitats. In fact, scientists estimate that more than half of the world’s sea turtles and nearly every seabird on Earth have eaten plastic in their lifetimes.

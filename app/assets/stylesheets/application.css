@@ -20,12 +20,13 @@
   --lighter-true-blue: #0080DF;
   --rich-electric-blue: #0095DE;
   --cerulean: #00ABDF;
+  --red: #CE3537;
 }
 
 /* ++++++++++++++ */
 /*    GENERAL     */
 /* ++++++++++++++ */
-* { border: 1px solid gold; }
+/* * { border: 1px solid gold; } */
 body {
   font-family: var(--main-font);
   margin: 0;
@@ -214,13 +215,24 @@ article {
   font-size: 0.9em;
 }
 .number {
-  color: red;
+  color: var(--red);
 }
-/* PLASTIC BOTTLE */
-.plastic-bottle {
-  background: url(waterbottle.svg) no-repeat;
+/* ITEMS */
+.plastic-bottle, .plastic-bag, .diaper, .straw {
   width: 30px;
   height: 60px;
+}
+.plastic-bottle {
+  background: url(waterbottle.svg) no-repeat;
+}
+.plastic-bag {
+  background: url(bag.svg) no-repeat;
+}
+.diaper {
+  background: url(diaper.svg) no-repeat;
+}
+.straw {
+  background: url(straw.png) no-repeat;
 }
 .bottles {
   margin: 200px 0 0 440px;
@@ -228,6 +240,18 @@ article {
   height: 100px;
 }
 .bottles-container {
+  width: 150px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.bags {
+  margin: 200px 0 0 440px;
+  width: 150px;
+  height: 100px;
+}
+.bags-container {
   width: 150px;
   height: 100px;
   display: flex;

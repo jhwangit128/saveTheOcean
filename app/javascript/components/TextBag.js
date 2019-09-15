@@ -18,7 +18,7 @@ class Text extends React.Component {
         WORLD WIDE, UP TO&nbsp;
         <CountUp delay={1} end={1000000000000}>
         </CountUp>
-        &nbsp;PLASTIC BOTTLES USED EVERY YEAR
+        &nbsp;PLASTIC BAGS DISCARDED EVERY YEAR
       </div>
     )
   }

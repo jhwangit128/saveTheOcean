@@ -4,7 +4,6 @@
 // packages & components
 import React from 'react'
 import Draggable from 'react-draggable'
-import Text from './Text.js'
 // ++++++++++++++++++++++++++++++++++++
 // COMPONENET CLASS
 // ++++++++++++++++++++++++++++++++++++
@@ -84,7 +83,16 @@ class DragBottle extends React.Component {
             <div className="box plastic-bottle"></div>
           </Draggable>
           <Draggable {...dragHandlers}>
+            <div className="box plastic-bag"></div>
+          </Draggable>
+          <Draggable {...dragHandlers}>
             <div className="box plastic-bottle"></div>
+          </Draggable>
+          <Draggable {...dragHandlers}>
+            <div className="box plastic-bottle"></div>
+          </Draggable>
+          <Draggable {...dragHandlers}>
+            <div className="box plastic-bag"></div>
           </Draggable>
           <Draggable {...dragHandlers}>
             <div className="box plastic-bottle"></div>
