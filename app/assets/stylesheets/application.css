@@ -13,6 +13,7 @@
   /* --logo-font: 'Gamja Flower'; */
   /* --accent-font: 'Monda'; */
   /*COLOR*/
+  --dark-blue: #010942;
   --medium-blue: #051FDE;
   --palatinate-blue: #0031DD;
   --navy-blue: #0058DE;
@@ -37,24 +38,22 @@ body {
 /*    HEADER     */
 /* +++++++++++++ */
 header {
-  position: sticky;
   width: 100%;
   height: 150px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* overflow: hidden; */
-}
-header  h1 {
-  font-family: var(--logo-font);
-  font-size: 2em;
-  line-height: 1em;
+  overflow: hidden;
+  z-index: 900;
 }
 .header-btn {
   margin-top: 100px;
   margin-right: 50px;
 }
 .logo {
+  font-family: var(--logo-font);
+  font-size: 1em;
+  line-height: 1.7em;
   width: 85px;
   height: 85px;
   margin-top: 30px;
@@ -64,8 +63,13 @@ header  h1 {
   transform: rotate(-45deg);
   float: left;
   margin-left: 20px;
+  color:white;
 }
-
+.menu {
+  top: 0;
+  z-index: 900;
+  position: sticky;
+}
 /* +++++++++++++++++++ */
 /*   WAVES ANIMATION   */
 /* +++++++++++++++++++ */
@@ -75,12 +79,11 @@ header  h1 {
   bottom:0;
   left:0;
   z-index: -5;
-  /* overflow-x: hidden; */
 }
 .wave {
   background: url(wave.svg) repeat-x;
   position: absolute;
-  top: -150px;
+  top: -210px;
   width: 5700px;
   height: 198px;
   animation: wave 5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
@@ -90,37 +93,37 @@ header  h1 {
 }
 .wave:nth-of-type(2) {
   background: url(wave2.svg) repeat-x;
-  top: -160px;
+  top: -210px;
   animation: wave 5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 5s ease -1.25s infinite;
   z-index: -1;
 }
 .wave:nth-of-type(3) {
   background: url(wave3.svg) repeat-x;
-  top: -170px;
-  animation: wave 5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.225s infinite, swell 5s ease -2.25s infinite;
+  top: -210px;
+  animation: wave 5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.225s infinite, swell 5s ease -1.35s infinite;
   z-index: -2;
 }
 .wave:nth-of-type(4) {
   background: url(wave4.svg) repeat-x;
-  top: -180px;
-  animation: wave 5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.325s infinite, swell 5s ease -2.25s infinite;
+  top: -210px;
+  animation: wave 5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.325s infinite, swell 5s ease -1.45s infinite;
   z-index: -3;
 }
 .wave:nth-of-type(5) {
   background: url(wave5.svg) repeat-x;
-  top: -190px;
-  animation: wave 5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.425s infinite, swell 5s ease -2.25s infinite;
+  top: -210px;
+  animation: wave 5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.425s infinite, swell 5s ease -1.55s infinite;
   z-index: -4;
 }
 .wave:nth-of-type(6) {
   background: url(wave6.svg) repeat-x;
-  top: -200px;
+  top: -210px;
   animation: wave 5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.525s infinite, swell 5s ease -2.25s infinite;
   z-index: -5;
 }
 .wave:nth-of-type(7) {
   background: url(wave7.svg) repeat-x;
-  top: -170px;
+  top: -210px;
   animation: wave 5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.625s infinite, swell 5s ease -2.25s infinite;
   z-index: -6;
 }
@@ -145,7 +148,7 @@ header  h1 {
 /*        MAIN        */
 /* ++++++++++++++++++ */
 main h1 {
-  color: var(--rich-electric-blue);
+  /* color: var(--rich-electric-blue); */
   text-transform: uppercase;
   margin-left: 30px;
   position: sticky;
@@ -154,10 +157,9 @@ main h1 {
   width: 100%;
 }
 .main-container {
-  margin-top: 60px;
   height: auto;
   background-color: var(--cerulean);
-  background-image: linear-gradient(var(--cerulean) 40%, var(--medium-blue));
+  background-image: linear-gradient(var(--cerulean) 20%, var(--dark-blue));
   /* overflow-x: scroll; */
   /* display: flex; */
 }
@@ -194,41 +196,27 @@ main h1 {
   background: url(whale.png) no-repeat;
   background-size: 250% auto;
 }
-.info-text {
-  width: 1356px;
-  height: 550px;
-  text-align: center;
-  color: white;
-  font-size: 3em;
-  display: flex;
-  flex-direction: row;
-}
-article {
-  width: 100%;
-  height: 900px;
-  z-index: 90;
-  top: 0;
-  right: 0;
-}
 .add-tip-btn {
   float:right;
 }
-.bottle-text {
-  margin: 120px 0 0 40px;
+.bottle-text, .bag-text {
   width: 400px;
   text-align: left;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 .number {
   color: var(--red);
 }
 /* ITEMS */
 .plastic-bottle, .plastic-bag, .diaper, .straw {
-  width: 30px;
-  height: 60px;
+  width: 90px;
+  height: 150px;
+  margin: 0;
 }
 .plastic-bottle {
   background: url(waterbottle.svg) no-repeat;
+  width: 90px;
+  height: 150px;
 }
 .plastic-bag {
   background: url(bag.svg) no-repeat;
@@ -239,19 +227,17 @@ article {
 .straw {
   background: url(straw.png) no-repeat;
 }
-.bottles {
-  margin: 200px 0 0 440px;
-  width: 150px;
-  height: 100px;
+.bottles, .bags {
+  display: flex;
+  flex-direction: row;
 }
 .bottles-container {
-  width: 150px;
-  height: 100px;
+  margin-top: 450px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.bags {
+/* .bags {
   margin: 200px 0 0 440px;
   width: 150px;
   height: 100px;
@@ -262,7 +248,7 @@ article {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
+} */
 
 /* +++++++++++++++ */
 /*     IMAGES      */
@@ -295,7 +281,6 @@ article {
   width: 100%;
   height: auto;
   border-radius: 5px;
-  float:right;
   display: flex;
   flex-flow: wrap;
   padding: 50px 0;
@@ -309,25 +294,26 @@ article {
   width: 30%;
   margin: 0 auto;
 }
-  header  {
-  position: sticky;
-  top: 0;
-  /* width: 100; */
-}
+
 /* ++++++++++++++ */
 /*      FORM      */
 /* ++++++++++++++ */
+.form-container {
+  width: 50%;
+  height: 900px;
+  margin: 0 auto;
+}
 form {
+  width: 100%;
+  height: 600px;
   background-color: white;
-  padding: 50px;
+  /* padding: 50px; */
   border-radius: 5px;
-  height: 600px;
+  /* margin: 0 auto; */
 }
-form-container {
-  background-color: white;
-  height: 600px;
+form > h1 {
+  color: var(--lighter-true-blue);
 }
-
 /* ++++++++++++++++ */
 /*      FOOTER      */
 /* ++++++++++++++++ */

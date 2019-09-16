@@ -14,17 +14,11 @@ class Text extends React.Component {
   // ++++++++++++
   render () {
     return (
-      <div className="text">
-        WORLD WIDE, OVER&nbsp;
-        <CountUp delay={1} end={500000000000}>
-          {/*{({ countUpRef, start }) => (
-            <div>
-              <span ref={countUpRef} />
-              <button onClick={start}>Start</button>
-            </div>
-          )}*/}
+      <div className="text-straw">
+        IN THE US AND UK, OVER&nbsp;
+        <CountUp className="number" delay={1} end={550000000}>
         </CountUp>
-        &nbsp;PLASTIC BOTTLES USED EVERY YEAR
+        &nbsp;THROWN AWAY EVERY DAY
       </div>
     )
   }

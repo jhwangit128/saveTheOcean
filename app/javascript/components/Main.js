@@ -12,6 +12,7 @@ import Text from './Text.js'
 import DragBag from './DragBag.js'
 import TextBag from './TextBag.js'
 import ScrollableAnchor from 'react-scrollable-anchor'
+import Button from '@material-ui/core/Button';
 
 // ++++++++++++++++++++++++++++++++++++
 // COMPONENET CLASS
@@ -119,19 +120,43 @@ class Main extends React.Component {
     const child = { width: `300em`, height: `100%`}
     return (
       <main>
+      <div className="menu">
+      <div className="logo">
+        <h1 onClick={() =>
+          {this.props.handleView('index')}}>
+            SAVE THE<br/>OCEAN
+        </h1>
+      </div>
+      <a href='#section1'> INFOGRAPHIC </a>
+      <a href='#section2'> IMAGES </a>
+      <a href='#section3'> TIPS </a>
+      <Button className="tips-btn" variant="contained" color="primary" onClick={() =>
+        {this.props.handleView('index')
+
+      }}>Home</Button>
+      <Button className="add-tip-btn" variant="contained" color="primary" onClick={() =>
+        {this.props.handleView('addTip')}}>
+        Add a Tip
+      </Button>
+      </div>
         <div className="main-contents">
-          <a href='#section1'> Go to section 1 </a>
-          <a href='#section2'> Go to section 2 </a>
-          <a href='#section3'> Go to section 3 </a>
+
           <ScrollableAnchor id={'section1'}>
-            <div className="infographic-section">
-            <div className="bottle-text" id="section1">
-              <div className="bottles" onMouseEnter={this.handleMouseHover}
-                onMouseLeave={this.handleMouseHover}>
-                <DragBottle/>
+            <div className="infographic-section" id="section1">
+              <div className="bottle-text">
+                <div className="bottles" onMouseEnter={this.handleMouseHover}
+                  onMouseLeave={this.handleMouseHover}>
+                  <DragBottle/>
+                </div>
+                {this.state.isHovering && <div><Text/></div>}
               </div>
-              {this.state.isHovering && <div><Text/></div>}
-            </div>
+              <div className="bag-text">
+                <div className="bags" onMouseEnter={this.handleMouseHover}
+                  onMouseLeave={this.handleMouseHover}>
+                  <DragBag/>
+                </div>
+                {this.state.isHovering && <div><Text/></div>}
+              </div>
             </div>
           </ScrollableAnchor>
           <ScrollableAnchor id={'section2'}>
