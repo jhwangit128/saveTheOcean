@@ -120,18 +120,19 @@ class Main extends React.Component {
     return (
       <main>
         <div className="main-contents">
-        <a href='#section1'> Go to section 1 </a>
-      <a href='#section2'> Go to section 2 </a>
-        <ScrollableAnchor id={'section1'}>
-          <div className="infographic-section">
-          <div className="bottle-text" id="section1">
-            <div className="bottles" onMouseEnter={this.handleMouseHover}
-              onMouseLeave={this.handleMouseHover}>
-              <DragBottle/>
+          <a href='#section1'> Go to section 1 </a>
+          <a href='#section2'> Go to section 2 </a>
+          <a href='#section3'> Go to section 3 </a>
+          <ScrollableAnchor id={'section1'}>
+            <div className="infographic-section">
+            <div className="bottle-text" id="section1">
+              <div className="bottles" onMouseEnter={this.handleMouseHover}
+                onMouseLeave={this.handleMouseHover}>
+                <DragBottle/>
+              </div>
+              {this.state.isHovering && <div><Text/></div>}
             </div>
-            {this.state.isHovering && <div><Text/></div>}
-          </div>
-          </div>
+            </div>
           </ScrollableAnchor>
           <ScrollableAnchor id={'section2'}>
           <div className="images-container">
@@ -147,6 +148,7 @@ class Main extends React.Component {
             </div>
           </div>
           </ScrollableAnchor>
+          <ScrollableAnchor id={'section3'}>
           <div className="cards-form">
             { this.props.view.page === 'index'
               ? this.state.tips.map(tip => (
@@ -167,6 +169,7 @@ class Main extends React.Component {
                 />
             }
           </div>
+          </ScrollableAnchor>
         </div>
       </main>
     )

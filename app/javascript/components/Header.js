@@ -21,23 +21,26 @@ class Header extends React.Component {
         <div className="wave"></div>
         <div className="wave"></div>
       </div>
-      <div className="logo">
-        <h1 onClick={() =>
-          {this.props.handleView('index')}}>
-            SAVE THE<br/>OCEAN
-        </h1>
-      </div>
-        <div className="header-btn">
-          <Button className="tips-btn" variant="contained" color="primary" onClick={() =>
-            {this.props.handleView('index')
+      <div className="sticky-header">
+        <div className="logo">
+          <h1 onClick={() =>
+            {this.props.handleView('index')}}>
+              SAVE THE<br/>OCEAN
+          </h1>
+        </div>
+          <div className="header-btn">
+            <Button className="tips-btn" variant="contained" color="primary" onClick={() =>
+              {this.props.handleView('index')
 
-          }}>Home</Button>
-          <Button className="add-tip-btn" variant="contained" color="primary" onClick={() =>
-            {this.props.handleView('addTip')}}>
-            Add a Tip
-          </Button>
+            }}>Home</Button>
+            <Button className="add-tip-btn" variant="contained" color="primary" onClick={() =>
+              {this.props.handleView('addTip')}}>
+              Add a Tip
+            </Button>
+          </div>
         </div>
       </header>
+
     )
   }
 }
