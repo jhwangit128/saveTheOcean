@@ -11,6 +11,7 @@ import DragBottle from './DragBottle.js'
 import Text from './Text.js'
 import DragBag from './DragBag.js'
 import TextBag from './TextBag.js'
+import ScrollableAnchor from 'react-scrollable-anchor'
 
 // ++++++++++++++++++++++++++++++++++++
 // COMPONENET CLASS
@@ -119,20 +120,20 @@ class Main extends React.Component {
     return (
       <main>
         <div className="main-contents">
-          <div className="bottle-text">
+        <a href='#section1'> Go to section 1 </a>
+      <a href='#section2'> Go to section 2 </a>
+        <ScrollableAnchor id={'section1'}>
+          <div className="infographic-section">
+          <div className="bottle-text" id="section1">
             <div className="bottles" onMouseEnter={this.handleMouseHover}
               onMouseLeave={this.handleMouseHover}>
               <DragBottle/>
             </div>
             {this.state.isHovering && <div><Text/></div>}
           </div>
-          <div className="bag-text">
-            <div className="bags" onMouseEnter={this.handleMouseHover}
-              onMouseLeave={this.handleMouseHover}>
-              <DragBag/>
-            </div>
-            {this.state.isHovering && <div><TextBag/></div>}
           </div>
+          </ScrollableAnchor>
+          <ScrollableAnchor id={'section2'}>
           <div className="images-container">
             <p>In the ocean, plastic pollution impacts sea turtles, whales, seabirds, fish, coral reefs, and countless other marine species and habitats. In fact, scientists estimate that more than half of the world’s sea turtles and nearly every seabird on Earth have eaten plastic in their lifetimes.
             </p>
@@ -145,6 +146,7 @@ class Main extends React.Component {
               ))}
             </div>
           </div>
+          </ScrollableAnchor>
           <div className="cards-form">
             { this.props.view.page === 'index'
               ? this.state.tips.map(tip => (
