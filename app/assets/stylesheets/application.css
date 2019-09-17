@@ -27,7 +27,7 @@
 /* ++++++++++++++ */
 /*    GENERAL     */
 /* ++++++++++++++ */
-* { border: 1px solid gold; }
+/* * { border: 1px solid gold; } */
 body {
   font-family: var(--main-font);
   margin: 0;
@@ -164,13 +164,7 @@ main h1 {
   /* display: flex; */
 }
 .main-contents {
-  /* background: url(whale.png) no-repeat; */
-  /* background-size: contain; */
-  /* overflow-x: auto;
-  overflow-y:hidden;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; */
+
 }
 .container-drag {
   width: 30%;
@@ -195,14 +189,16 @@ main h1 {
   height: 900px;
   background: url(whale.png) no-repeat;
   background-size: 250% auto;
+  background-position-y: 180px;
 }
 .add-tip-btn {
   float:right;
 }
-.bottle-text, .bag-text {
-  width: 400px;
+.bottle-text-container, .bag-text-container {
   text-align: left;
   font-size: 1em;
+  display: flex;
+  flex-direction: row;
 }
 .number {
   color: var(--red);
@@ -227,52 +223,72 @@ main h1 {
 .straw {
   background: url(straw.png) no-repeat;
 }
-.bottles, .bags {
-  display: flex;
-  flex-direction: row;
+.bottle-text-container {
+  width: 200px;
+  height: 200px;
+  margin: 100px 0 0 300px;
+  top: 100px;
 }
-.bottles-container {
-  margin-top: 450px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.bottles {
+  background: url(waterbottle-fill.png) no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 150px;
+  transform: rotate(-45deg);
 }
-/* .bags {
-  margin: 200px 0 0 440px;
-  width: 150px;
-  height: 100px;
+.text {
+  width: 450px;
+  font-size: 2em;
+  margin: 250px 0 0 50px;
+  transform: rotate(45deg);
 }
-.bags-container {
-  width: 150px;
-  height: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-} */
+/* BAG */
+.bag-text-container {
+  margin: 100px 200px 220px 900px;
+}
+.bags {
+  background: url(bag-fill.png) no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 150px;
+  transform: rotate(25deg);
+}
+.text-bag {
+  width: 450px;
+  font-size: 2em;
+  transform: rotate(-25deg);
+  margin: -20px 0 500px 130px;
+}
 
 /* +++++++++++++++ */
 /*     IMAGES      */
 /* +++++++++++++++ */
 .images-container {
-  width: 100%;
+  padding-top: 150px;
+  width: 80%;
   height: 900px;
   display: flex;
   flex-direction: row;
-  border-radius: 5px;
   background: url(whale.png) no-repeat;
   background-size: 250% auto;
   background-position: 50% 50%;
+  margin: 0 auto;
 }
 .images {
-  width: 50%;
+  border-radius: 5px;
+  width: 660px;
+  height: 600px;
   overflow-y: scroll;
 }
 .images-container > p {
   width: 360px;
   font-size: 2em;
   text-align: left;
-  padding: 20px 30px 0 30px;
+  padding: 60px 30px 0 30px;
 
+}
+.image {
+  width: 100%;
 }
 /* +++++++++++++++ */
 /*      CARDS      */

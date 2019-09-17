@@ -11,6 +11,7 @@ import DragBottle from './DragBottle.js'
 import Text from './Text.js'
 import DragBag from './DragBag.js'
 import TextBag from './TextBag.js'
+import TextEmpty from './TextEmpty.js'
 import ScrollableAnchor from 'react-scrollable-anchor'
 import Button from '@material-ui/core/Button';
 
@@ -25,7 +26,8 @@ class Main extends React.Component {
     super(props);
     this.state = {
       tips: [],
-      isHovering: false,
+      isToggleOn: true,
+      isToggle: true,
     };
   }
 
@@ -106,6 +108,17 @@ class Main extends React.Component {
     }
   }
 
+  handleClick = () => {
+    this.setState(state => ({
+      isToggleOn: !state.isToggleOn
+    }));
+  }
+  onClick = () => {
+    this.setState(state => ({
+      isToggle: !state.isToggle
+    }));
+  }
+
   // ++++++++++++++
   // LIFE CYCLES
   // ++++++++++++++
@@ -142,20 +155,17 @@ class Main extends React.Component {
         <div className="main-contents">
 
           <ScrollableAnchor id={'section1'}>
-            <div className="infographic-section" id="section1">
-              <div className="bottle-text">
-                <div className="bottles" onMouseEnter={this.handleMouseHover}
-                  onMouseLeave={this.handleMouseHover}>
-                  <DragBottle/>
+            <div className="infographic-section">
+              <div className="bottle-text-container">
+                <div onClick={this.handleClick} className="bottles">
+                  {this.state.isToggleOn ? <TextEmpty /> : <Text /> }
                 </div>
-                {this.state.isHovering && <div><Text/></div>}
               </div>
-              <div className="bag-text">
-                <div className="bags" onMouseEnter={this.handleMouseHover}
-                  onMouseLeave={this.handleMouseHover}>
-                  <DragBag/>
+              <div className="bag-text-container">
+                <div onClick={this.onClick} className="bags">
+                  {this.state.isToggle ? <TextEmpty /> : <TextBag /> }
                 </div>
-                {this.state.isHovering && <div><Text/></div>}
+
               </div>
             </div>
           </ScrollableAnchor>
