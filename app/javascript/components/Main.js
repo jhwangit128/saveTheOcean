@@ -3,6 +3,8 @@
 // ++++++++++++++++++++++++++++++++++++
 // packages & components
 import React from 'react'
+import ScrollableAnchor from 'react-scrollable-anchor'
+import Button from '@material-ui/core/Button';
 import Show from './Show.js'
 import Tip from './Tip.js'
 import Image from './Image.js'
@@ -12,8 +14,7 @@ import Text from './Text.js'
 import DragBag from './DragBag.js'
 import TextBag from './TextBag.js'
 import TextEmpty from './TextEmpty.js'
-import ScrollableAnchor from 'react-scrollable-anchor'
-import Button from '@material-ui/core/Button';
+
 
 // ++++++++++++++++++++++++++++++++++++
 // COMPONENET CLASS
@@ -165,7 +166,11 @@ class Main extends React.Component {
                 <div onClick={this.onClick} className="bags">
                   {this.state.isToggle ? <TextEmpty /> : <TextBag /> }
                 </div>
-
+              </div>
+              <div className="brush-text-container">
+                <div onClick={this.onClick} className="brushes">
+                  {this.state.isToggle ? <TextEmpty /> : <TextBag /> }
+                </div>
               </div>
             </div>
           </ScrollableAnchor>

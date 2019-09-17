@@ -195,6 +195,7 @@ main h1 {
   float:right;
 }
 .bottle-text-container, .bag-text-container {
+  width: 300px;
   text-align: left;
   font-size: 1em;
   display: flex;
@@ -224,10 +225,8 @@ main h1 {
   background: url(straw.png) no-repeat;
 }
 .bottle-text-container {
-  width: 200px;
-  height: 200px;
-  margin: 100px 0 0 300px;
-  top: 100px;
+  margin: 200px 0 0 300px;
+  padding-top: 100px;
 }
 .bottles {
   background: url(waterbottle-fill.png) no-repeat;
