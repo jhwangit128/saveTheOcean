@@ -13,6 +13,8 @@ import DragBottle from './DragBottle.js'
 import Text from './Text.js'
 import DragBag from './DragBag.js'
 import TextBag from './TextBag.js'
+import TextStraw from './TextStraw.js'
+import TextBrush from './TextBrush.js'
 import TextEmpty from './TextEmpty.js'
 
 
@@ -27,8 +29,14 @@ class Main extends React.Component {
     super(props);
     this.state = {
       tips: [],
-      isToggleOn: true,
-      isToggle: true,
+      isToggleBottle: true,
+      isToggleBag: true,
+      isToggleBrush: true,
+      isToggleDiaper: true,
+      isToggleStraw: true,
+      isToggleGum: true,
+      isToggleRazor: true,
+      isToggleSmoke: true,
     };
   }
 
@@ -100,26 +108,31 @@ class Main extends React.Component {
       .catch(err => console.log(err))
   }
 
-  handleMouseHover = () => {
-    this.setState(this.toggleHoverState)
-  }
-  toggleHoverState = (state) => {
-    return {
-      isHovering: !state.isHovering,
-    }
-  }
-
-  handleClick = () => {
-    this.setState(state => ({
-      isToggleOn: !state.isToggleOn
+  clickBottle = () => {
+    this.setState(bottle => ({
+      isToggleBottle: !bottle.isToggleBottle
     }));
   }
-  onClick = () => {
-    this.setState(state => ({
-      isToggle: !state.isToggle
+  clickBag = () => {
+    this.setState(bag => ({
+      isToggleBag: !bag.isToggleBag
     }));
   }
-
+  clickStraw = () => {
+    this.setState(straw => ({
+      isToggleStraw: !straw.isToggleStraw
+    }));
+  }
+  clickBrush = () => {
+    this.setState(brush => ({
+      isToggleBrush: !brush.isToggleBrush
+    }));
+  }
+  clickDiaper = () => {
+    this.setState(diaper => ({
+      isToggleDiaper: !diaper.isToggleDiaper
+    }));
+  }
   // ++++++++++++++
   // LIFE CYCLES
   // ++++++++++++++
@@ -158,21 +171,26 @@ class Main extends React.Component {
           <ScrollableAnchor id={'section1'}>
             <div className="infographic-section">
               <div className="bottle-text-container">
-                <div onClick={this.handleClick} className="bottles">
-                  {this.state.isToggleOn ? <TextEmpty /> : <Text /> }
+                <div onClick={this.clickBottle} className="bottles">
+                  {this.state.isToggleBottle ? <TextEmpty /> : <Text /> }
                 </div>
               </div>
               <div className="bag-text-container">
-                <div onClick={this.onClick} className="bags">
-                  {this.state.isToggle ? <TextEmpty /> : <TextBag /> }
+                <div onClick={this.clickBag} className="bags">
+                  {this.state.isToggleBag ? <TextEmpty /> : <TextBag /> }
                 </div>
               </div>
-              <div className="brush-text-container">
-                <div onClick={this.onClick} className="brushes">
-                  {this.state.isToggle ? <TextEmpty /> : <TextBag /> }
+              <div className="straw-text-container">
+                <div onClick={this.clickStraw} className="straws">
+                  {this.state.isToggleStraw ? <TextEmpty /> : <TextStraw /> }
                 </div>
+              </div>
+            <div className="brush-text-container">
+              <div onClick={this.clickBrush} className="brushes">
+                {this.state.isToggleBrush ? <TextEmpty /> : <TextBrush /> }
               </div>
             </div>
+          </div>
           </ScrollableAnchor>
           <ScrollableAnchor id={'section2'}>
           <div className="images-container">

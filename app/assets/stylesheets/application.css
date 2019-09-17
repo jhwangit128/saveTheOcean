@@ -27,7 +27,7 @@
 /* ++++++++++++++ */
 /*    GENERAL     */
 /* ++++++++++++++ */
-/* * { border: 1px solid gold; } */
+* { border: 1px solid gold; }
 body {
   font-family: var(--main-font);
   margin: 0;
@@ -194,12 +194,13 @@ main h1 {
 .add-tip-btn {
   float:right;
 }
-.bottle-text-container, .bag-text-container {
-  width: 300px;
+.bottle-text-container, .bag-text-container, .brush-text-container, .straw-text-container {
+  width: 100%;
   text-align: left;
   font-size: 1em;
-  display: flex;
-  flex-direction: row;
+}
+.brush-text-container {
+  text-align: right;
 }
 .number {
   color: var(--red);
@@ -225,8 +226,7 @@ main h1 {
   background: url(straw.png) no-repeat;
 }
 .bottle-text-container {
-  margin: 200px 0 0 300px;
-  padding-top: 100px;
+  margin: 0 0 0 300px;
 }
 .bottles {
   background: url(waterbottle-fill.png) no-repeat;
@@ -238,12 +238,12 @@ main h1 {
 .text {
   width: 450px;
   font-size: 2em;
-  margin: 250px 0 0 50px;
+  margin: 240px 0 0 60px;
   transform: rotate(45deg);
 }
 /* BAG */
 .bag-text-container {
-  margin: 100px 200px 220px 900px;
+  margin: 0 200px 0 500px;
 }
 .bags {
   background: url(bag-fill.png) no-repeat;
@@ -256,7 +256,39 @@ main h1 {
   width: 450px;
   font-size: 2em;
   transform: rotate(-25deg);
-  margin: -20px 0 500px 130px;
+  margin: -150px 0 0 130px;
+}
+/* STRAW */
+.straw-text-container {
+  margin: 0 200px 0 300px;
+}
+.straws {
+  background: url(straw-fill.png) no-repeat;
+  background-size: contain;
+  width: 150px;
+  height: 150px;
+}
+.text-straw {
+  width: 450px;
+  font-size: 2em;
+  margin: 0 0 0 130px;
+}
+/* BRUSH */
+.brush-text-container {
+  margin: 0 0 0 800px;
+}
+.brushes {
+  background: url(toothbrush-fill.png) no-repeat;
+  background-size: contain;
+  width: 150px;
+  height: 250px;
+  transform: rotate(60deg);
+}
+.text-brush {
+  width: 450px;
+  font-size: 2em;
+  transform: rotate(-60deg);
+  margin: 350px 0 0 -320px;
 }
 
 /* +++++++++++++++ */

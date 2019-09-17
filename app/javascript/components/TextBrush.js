@@ -8,22 +8,20 @@ import CountUp from 'react-countup'
 // ++++++++++++++++++++++++++++++++++++
 // COMPONENET CLASS
 // ++++++++++++++++++++++++++++++++++++
-class Text extends React.Component {
+class TextBrush extends React.Component {
   // ++++++++++++
   // RENDER
   // ++++++++++++
   render () {
     return (
-      <div>
-        <div className="text">
-          WORLD WIDE, OVER<br />
-          <CountUp className="number" delay={1} end={500000000000}>
-          </CountUp>
-          &nbsp;PLASTIC BOTTLES <br /> USED EVERY YEAR
-        </div>
+      <div className="text-brush">
+        IN THE US AND UK, OVER<br />
+        <CountUp className="number" delay={1} end={1000000000}>
+        </CountUp>
+        PLASTIC STRAWS<br /> THROWN AWAY EVERY DAY
       </div>
     )
   }
 }
 
-export default Text
+export default TextBrush
