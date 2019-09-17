@@ -17,6 +17,8 @@ class Form extends React.Component {
       title: '',
       username: '',
       image: '',
+      img: '',
+      description: '',
       id: null
     }
   }
@@ -39,6 +41,8 @@ class Form extends React.Component {
         title: this.state.title,
         username: this.state.username,
         image: this.state.image,
+        img: this.state.img,
+        description: this.state.description,
         id: this.state.id
       }
     if(this.props.view.page === 'addTip') {
@@ -50,6 +54,8 @@ class Form extends React.Component {
       title: "",
       username: "",
       image:"",
+      img: "",
+      description: "",
       id: null
     })
   } else {
@@ -57,7 +63,7 @@ class Form extends React.Component {
   }
 }
   checkFields = () => {
-  if (this.state.title && this.state.username && this.state.image){
+  if (this.state.title && this.state.username && this.state.image && this.state.img && this.state.description){
     return true
   } else {
     return false
@@ -71,6 +77,8 @@ class Form extends React.Component {
       title: this.props.formInputs.title,
       username: this.props.formInputs.username,
       image: this.props.formInputs.image,
+      img: this.props.formInputs.img,
+      description: this.props.formInputs.description,
       id: this.props.formInputs.id
      })
   }
@@ -81,6 +89,8 @@ class Form extends React.Component {
         title: this.props.formInputs.title,
         username: this.props.formInputs.username,
         image: this.props.formInputs.image,
+        img: this.props.formInputs.img,
+        description: this.props.formInputs.description,
         id: this.props.formInputs.id
       })
     }
@@ -109,6 +119,10 @@ class Form extends React.Component {
             <label>
               image
               <input type="text" placeholder="image" id="image" value={this.state.image} onChange={this.handleChange}/>
+            </label>
+            <label>
+              description
+              <input type="textarea" placeholder="description" id="description" value={this.state.description} onChange={this.handleChange}/>
             </label><br /><br />
           </div>
           <input type="submit" value="Submit" />

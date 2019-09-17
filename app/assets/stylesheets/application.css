@@ -446,6 +446,15 @@ main h1 {
 }
 
 /* ++++++++++++++ */
+/*      SHOW      */
+/* ++++++++++++++ */
+.show-container {
+  background: white;
+  margin: 0 auto;
+  color: black;
+}
+
+/* ++++++++++++++ */
 /*      FORM      */
 /* ++++++++++++++ */
 .form-container {
