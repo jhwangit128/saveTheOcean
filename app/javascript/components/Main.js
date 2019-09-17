@@ -236,40 +236,44 @@ class Main extends React.Component {
           </div>
           </ScrollableAnchor>
           <ScrollableAnchor id={'section2'}>
-          <div className="images-container">
-            <p>In the ocean, plastic pollution impacts sea turtles, whales, seabirds, fish, coral reefs, and countless other marine species and habitats. In fact, scientists estimate that more than half of the world’s sea turtles and nearly every seabird on Earth have eaten plastic in their lifetimes.
-            </p>
-            <div className="images">
-              {this.state.tips.map(tip => (
-                <Image
-                  key={tip.id}
-                  tip={tip}
-                  />
-              ))}
+          <div className="section2-container">
+            <div className="images-container">
+              <p>In the ocean, plastic pollution impacts sea turtles, whales, seabirds, fish, coral reefs, and countless other marine species and habitats. In fact, scientists estimate that more than half of the world’s sea turtles and nearly every seabird on Earth have eaten plastic in their lifetimes.
+              </p>
+              <div className="images">
+                {this.state.tips.map(tip => (
+                  <Image
+                    key={tip.id}
+                    tip={tip}
+                    />
+                ))}
+              </div>
             </div>
           </div>
           </ScrollableAnchor>
           <ScrollableAnchor id={'section3'}>
-          <div className="cards-form">
-            { this.props.view.page === 'index'
-              ? this.state.tips.map(tip => (
+            <div className="cards-form-big">
+              <div className="cards-form-small">
+                { this.props.view.page === 'index'
+                  ? this.state.tips.map(tip => (
 
-                <Tip
-                  key={tip.id}
-                  tip={tip}
-                  handleView={this.props.handleView}
-                  handleDelete={this.deleteTip}
+                    <Tip
+                      key={tip.id}
+                      tip={tip}
+                      handleView={this.props.handleView}
+                      handleDelete={this.deleteTip}
 
-                />
-              ))
-              : <Form
-                  handleAdd={this.addTip}
-                  handleUpdate={this.updateTip}
-                  formInputs={this.props.formInputs}
-                  view={this.props.view}
-                />
-            }
-          </div>
+                    />
+                  ))
+                  : <Form
+                      handleAdd={this.addTip}
+                      handleUpdate={this.updateTip}
+                      formInputs={this.props.formInputs}
+                      view={this.props.view}
+                    />
+                }
+              </div>
+            </div>
           </ScrollableAnchor>
         </div>
       </main>

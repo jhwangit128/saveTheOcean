@@ -21,14 +21,14 @@ class Image extends React.Component {
   // ++++++++++++
   render () {
     return (
-      <div className="image-container">
-        <Card className="image" style={{maxWidth: 445}}>
+      <React.Fragment>
+        <Card className="image" style={{maxWidth: 799}}>
             <CardMedia
-              style={{height: 340}}
+              style={{height: 490}}
               image={this.props.tip.img}
             />
         </Card>
-      </div>
+      </React.Fragment>
     )
   }
 }
