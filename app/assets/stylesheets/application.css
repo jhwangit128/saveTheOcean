@@ -27,13 +27,18 @@
 /* ++++++++++++++ */
 /*    GENERAL     */
 /* ++++++++++++++ */
-* { border: 1px solid gold; }
+/* * { border: 1px solid gold; } */
 body {
   font-family: var(--main-font);
   margin: 0;
   color: white;
 }
-
+a:visited {
+  color: white;
+}
+a {
+  text-decoration: none;
+}
 /* +++++++++++++ */
 /*    HEADER     */
 /* +++++++++++++ */
@@ -66,10 +71,28 @@ header {
   color:white;
 }
 .menu {
+  width: 100%;
   top: 0;
   z-index: 900;
   position: sticky;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
 }
+.section-btn {
+  width: 50%;
+}
+.right-btn{
+  width: 15%;
+  display: flex;
+  flex-flow: row;
+  height: 50%;
+
+}
+/* .add-tip-btn, .home-btn {
+  float:right;
+} */
+
 /* +++++++++++++++++++ */
 /*   WAVES ANIMATION   */
 /* +++++++++++++++++++ */
@@ -187,12 +210,10 @@ main h1 {
 /* TEXT */
 .infographic-section {
   height: 900px;
+  padding-top: 50px;
   background: url(whale.png) no-repeat;
   background-size: 250% auto;
   background-position-y: 180px;
-}
-.add-tip-btn {
-  float:right;
 }
 .bottle-text-container, .bag-text-container, .brush-text-container, .straw-text-container {
   width: 100%;
@@ -275,7 +296,7 @@ main h1 {
 }
 /* BRUSH */
 .brush-text-container {
-  margin: 0 0 0 800px;
+  margin: 0 0 0 600px;
 }
 .brushes {
   background: url(toothbrush-fill.png) no-repeat;
@@ -289,6 +310,72 @@ main h1 {
   font-size: 2em;
   transform: rotate(-60deg);
   margin: 350px 0 0 -320px;
+}
+/* DIAPER */
+.diaper-text-container {
+  margin: -450px 0 0 1090px;
+}
+.diapers {
+  background: url(diaper-fill.png) no-repeat;
+  background-size: contain;
+  width: 180px;
+  height: 150px;
+}
+.text-diaper {
+  width: 650px;
+  font-size: 2em;
+  margin: -150px 0 0 0;
+}
+/* RAZOR */
+.razor-text-container {
+  margin: 250px 0 0 100px;
+}
+.razors {
+  background: url(razor-fill.png) no-repeat;
+  background-size: contain;
+  width: 150px;
+  height: 250px;
+  transform: rotate(120deg);
+}
+.text-razor {
+  width: 450px;
+  font-size: 2em;
+  transform: rotate(-120deg);
+  margin: -200px 0 0 -350px;
+}
+/* GUM */
+.gum-text-container {
+  margin: -400px 0 0 800px;
+}
+.gums {
+  background: url(gum-fill.png) no-repeat;
+  background-size: contain;
+  width: 180px;
+  height: 250px;
+  transform: rotate(120deg);
+}
+.text-gum {
+  width: 350px;
+  font-size: 2em;
+  transform: rotate(-120deg);
+  margin: -200px 0 0 -250px;
+}
+/* SMOKE */
+.smoke-text-container {
+  margin: -300px 0 0 1250px;
+}
+.smokes {
+  background: url(smoking-fill.png) no-repeat;
+  background-size: contain;
+  width: 180px;
+  height: 250px;
+  transform: scaleX(-1) rotate(20deg);
+}
+.text-smoke {
+  width: 350px;
+  font-size: 2em;
+  transform: scaleX(-1) rotate(20deg);
+  margin: -50px 0 0 130px;
 }
 
 /* +++++++++++++++ */

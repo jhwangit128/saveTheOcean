@@ -10,11 +10,15 @@ import Tip from './Tip.js'
 import Image from './Image.js'
 import Form from './Form.js'
 import DragBottle from './DragBottle.js'
-import Text from './Text.js'
 import DragBag from './DragBag.js'
+import Text from './Text.js'
 import TextBag from './TextBag.js'
 import TextStraw from './TextStraw.js'
 import TextBrush from './TextBrush.js'
+import TextDiaper from './TextDiaper.js'
+import TextRazor from './TextRazor.js'
+import TextGum from './TextGum.js'
+import TextSmoking from './TextSmoking.js'
 import TextEmpty from './TextEmpty.js'
 
 
@@ -133,6 +137,21 @@ class Main extends React.Component {
       isToggleDiaper: !diaper.isToggleDiaper
     }));
   }
+  clickGum = () => {
+    this.setState(gum => ({
+      isToggleGum: !gum.isToggleGum
+    }));
+  }
+  clickRazor = () => {
+    this.setState(razor => ({
+      isToggleRazor: !razor.isToggleRazor
+    }));
+  }
+  clickSmoke = () => {
+    this.setState(smoke => ({
+      isToggleSmoke: !smoke.isToggleSmoke
+    }));
+  }
   // ++++++++++++++
   // LIFE CYCLES
   // ++++++++++++++
@@ -148,23 +167,27 @@ class Main extends React.Component {
     return (
       <main>
       <div className="menu">
-      <div className="logo">
-        <h1 onClick={() =>
-          {this.props.handleView('index')}}>
-            SAVE THE<br/>OCEAN
-        </h1>
-      </div>
-      <a href='#section1'> INFOGRAPHIC </a>
-      <a href='#section2'> IMAGES </a>
-      <a href='#section3'> TIPS </a>
-      <Button className="tips-btn" variant="contained" color="primary" onClick={() =>
-        {this.props.handleView('index')
+        <div className="logo">
+          <h1 onClick={() =>
+            {this.props.handleView('index')}}>
+              SAVE THE<br/>OCEAN
+          </h1>
+        </div>
+        <div className="section-btn">
+          <Button variant="contained" color="primary"><a href='#section1'> INFOGRAPHIC</a></Button>
+          <Button variant="contained" color="primary"><a href='#section2'> IMAGES</a></Button>
+          <Button variant="contained" color="primary"><a href='#section3'> TIPS</a></Button>
+        </div>
+        <div className="right-btn">
+          <Button className="home-btn" variant="contained" color="primary" onClick={() =>
+            {this.props.handleView('index')
 
-      }}>Home</Button>
-      <Button className="add-tip-btn" variant="contained" color="primary" onClick={() =>
-        {this.props.handleView('addTip')}}>
-        Add a Tip
-      </Button>
+          }}>Home</Button>
+          <Button className="add-tip-btn" variant="contained" color="primary" onClick={() =>
+            {this.props.handleView('addTip')}}><a href='#section3'>
+            Add a Tip</a>
+          </Button>
+        </div>
       </div>
         <div className="main-contents">
 
@@ -188,6 +211,26 @@ class Main extends React.Component {
             <div className="brush-text-container">
               <div onClick={this.clickBrush} className="brushes">
                 {this.state.isToggleBrush ? <TextEmpty /> : <TextBrush /> }
+              </div>
+            </div>
+            <div className="diaper-text-container">
+              <div onClick={this.clickDiaper} className="diapers">
+                {this.state.isToggleDiaper ? <TextEmpty /> : <TextDiaper /> }
+              </div>
+            </div>
+            <div className="gum-text-container">
+              <div onClick={this.clickGum} className="gums">
+                {this.state.isToggleGum ? <TextEmpty /> : <TextGum /> }
+              </div>
+            </div>
+            <div className="razor-text-container">
+              <div onClick={this.clickRazor} className="razors">
+                {this.state.isToggleRazor ? <TextEmpty /> : <TextRazor /> }
+              </div>
+            </div>
+            <div className="smoke-text-container">
+              <div onClick={this.clickSmoke} className="smokes">
+                {this.state.isToggleSmoke ? <TextEmpty /> : <TextSmoking /> }
               </div>
             </div>
           </div>

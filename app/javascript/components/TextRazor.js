@@ -8,20 +8,20 @@ import CountUp from 'react-countup'
 // ++++++++++++++++++++++++++++++++++++
 // COMPONENET CLASS
 // ++++++++++++++++++++++++++++++++++++
-class TextDiaper extends React.Component {
+class TextRazor extends React.Component {
   // ++++++++++++
   // RENDER
   // ++++++++++++
   render () {
     return (
-      <div className="text-diaper">
-        IN THE US &nbsp;
-        <CountUp className="number" delay={1} end={27400000000}>
+      <div className="text-razor">
+        IN THE US, OVER <br />
+        <CountUp className="number" delay={1} end={2000000000}>
         </CountUp>
-        <br />DISPOSABLES DIAPERS<br />THROWN AWAY EVERY YEAR
+        &nbsp;DISPOSABLE RAZORS<br />THROWN AWAY EVERY DAY
       </div>
     )
   }
 }
 
-export default TextDiaper
+export default TextRazor

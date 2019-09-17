@@ -8,20 +8,20 @@ import CountUp from 'react-countup'
 // ++++++++++++++++++++++++++++++++++++
 // COMPONENET CLASS
 // ++++++++++++++++++++++++++++++++++++
-class TextDiaper extends React.Component {
+class TextGum extends React.Component {
   // ++++++++++++
   // RENDER
   // ++++++++++++
   render () {
     return (
-      <div className="text-diaper">
-        IN THE US &nbsp;
-        <CountUp className="number" delay={1} end={27400000000}>
-        </CountUp>
-        <br />DISPOSABLES DIAPERS<br />THROWN AWAY EVERY YEAR
+      <div className="text-gum">
+        WORLDWIDE, OVER<br />
+        <CountUp className="number" delay={1} end={100000}>
+        </CountUp>TONS OF
+        &nbsp;GUMS <br /> THROWN AWAY EVERY DAY
       </div>
     )
   }
 }
 
-export default TextDiaper
+export default TextGum
