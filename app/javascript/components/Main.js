@@ -4,7 +4,7 @@
 // packages & components
 import React from 'react'
 import ScrollableAnchor from 'react-scrollable-anchor'
-import Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button'
 import Show from './Show.js'
 import Tip from './Tip.js'
 import Image from './Image.js'
@@ -21,7 +21,6 @@ import TextGum from './TextGum.js'
 import TextSmoking from './TextSmoking.js'
 import TextEmpty from './TextEmpty.js'
 
-
 // ++++++++++++++++++++++++++++++++++++
 // COMPONENET CLASS
 // ++++++++++++++++++++++++++++++++++++
@@ -30,7 +29,7 @@ class Main extends React.Component {
   // STATE
   // ++++++++++++
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       tips: [],
       isToggleBottle: true,
@@ -163,7 +162,6 @@ class Main extends React.Component {
   // RENDER
   // ++++++++++++
   render () {
-    const child = { width: `300em`, height: `100%`}
     return (
       <main>
       <div className="menu">
@@ -254,7 +252,13 @@ class Main extends React.Component {
           <ScrollableAnchor id={'section3'}>
             <div className="cards-form-big">
               <div className="cards-form-small">
-                { this.props.view.page === 'index'
+                {this.props.thisTip.title ?
+                  <Show
+                    tip={this.props.thisTip}
+                    handleDelete={this.handleDelete}
+                    handleView={this.props.handleView}
+                  />
+                : this.props.view.page === 'index'
                   ? this.state.tips.map(tip => (
 
                     <Tip
@@ -262,7 +266,6 @@ class Main extends React.Component {
                       tip={tip}
                       handleView={this.props.handleView}
                       handleDelete={this.deleteTip}
-
                     />
                   ))
                   : <Form

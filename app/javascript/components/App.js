@@ -27,6 +27,14 @@ class App extends React.Component {
         username: null,
         image: null,
         id: null
+      },
+      thisTip: {
+        title: null,
+        username: null,
+        image: null,
+        description: null,
+        img: null,
+        id: null
       }
     }
   }
@@ -42,13 +50,29 @@ class App extends React.Component {
       image: '',
       id: null
     }
+    let thisTip = {
+      title: '',
+      username: '',
+      image: '',
+      description: '',
+      img: '',
+      id: null
+    }
 
     switch (view) {
       case 'index':
         pageTitle = "Let's save the ocean"
         break
-      case 'showTips':
+      case 'show':
         pageTitle = "Tips"
+        thisTip = {
+          title: tip.title,
+          username: tip.username,
+          image: tip.image,
+          description: tip.description,
+          img: tip.img,
+          id: tip.id
+        }
         break
       case 'addTip':
         pageTitle = 'Add a Tip'
@@ -70,7 +94,8 @@ class App extends React.Component {
         page: view,
         pageTitle: pageTitle
       },
-      formInputs : formInputs
+      formInputs: formInputs,
+      thisTip: thisTip
     })
   }
 
@@ -86,6 +111,7 @@ class App extends React.Component {
             view={this.state.view}
             handleView={this.handleView}
             formInputs={this.state.formInputs}
+            thisTip={this.state.thisTip}
           />
         </div>
         <Footer />
