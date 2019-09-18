@@ -2,10 +2,7 @@
 // DEPENDENCIES
 // +++++++++++++++++++
 import React from 'react'
-import Grid from '@material-ui/core/Grid'
-import Container from '@material-ui/core/Container'
-import Typography from '@material-ui/core/Typography'
-
+import Button from '@material-ui/core/Button'
 // +++++++++++++++++++
 // COMPONENT CLASS
 // +++++++++++++++++++
@@ -15,31 +12,28 @@ class Show extends React.Component {
   // +++++++++++++++++++
   render () {
     return (
-      <Container fixed className="show-container">
-        <Container>
-          <Grid item xs={12} className="show-tip-image">
-              <img src={this.props.tip.image}/>
-          </Grid>
-          <Grid item xs={12} className="show-tip-title">
+      <article className="show-article">
+        <div className="show-container">
+          <div className="show-tip-image">
+            <img src={this.props.tip.image}/>
+          </div>
+          <div className="show-tip-title">
             <h1>
               {this.props.tip.title}
             </h1>
-          </Grid>
-          <Grid item xs={12} className="tip-username">
-            <h3>Uploaded by <span>{this.props.tip.username}</span></h3>
-          </Grid>
-          <Grid item xs={12} className="tip-description">
+          </div>
+          <div className="tip-username">
+            <h3>by <span className="username">{this.props.tip.username}</span></h3>
+          </div>
+          <div className="tip-description">
             <p>{this.props.tip.description}</p>
-          </Grid>
-          <Grid item xs={3} className="tip-buttons">
-              <div className="edit-btn" onClick={() => {this.props.handleView('editTip', this.props.tip)}}>EDIT TIP</div>
-          </Grid>
-          <Grid item xs={3}>
-              <div onClick={() => {this.props.handleDelete(this.props.tip.id)}}>DELETE TIP
-            </div>
-          </Grid>
-        </Container>
-      </Container>
+          </div>
+          <div className="tip-buttons">
+              <Button className="edit-btn" onClick={() => {this.props.handleView('editTip', this.props.tip)}}>EDIT TIP</Button>
+              <Button onClick={() => {this.props.handleDelete(this.props.tip.id)}}>DELETE TIP</Button>
+          </div>
+        </div>
+      </article>
     )
   }
 }

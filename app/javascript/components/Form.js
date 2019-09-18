@@ -3,6 +3,8 @@
 // ++++++++++++++++++++++++++++++++++++
 // packages & components
 import React from 'react';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 // ++++++++++++++++++++++++++++++++++++
 // COMPONENET CLASS
@@ -26,16 +28,12 @@ class Form extends React.Component {
   // ++++++++++++
   // HANDLERS
   // ++++++++++++
-  handleChange = (event) => {
-    if (event.target){
-      this.setState({[event.target.id] : event.target.value})
-    } else {
-      this.setState({body: event})
-    }
-  }
+  handleChange = (e) => {
+      this.setState({[e.target.id] : e.target.value})
+   }
 
-  handleSubmit = (event) => {
-    event.preventDefault()
+  handleSubmit = (e) => {
+    e.preventDefault()
     if (this.checkFields()){
       const submit = {
         title: this.state.title,
@@ -69,6 +67,9 @@ class Form extends React.Component {
     return false
   }
   }
+
+
+
   // ++++++++++++++
   // LIFE CYCLES
   // ++++++++++++++
@@ -108,24 +109,19 @@ class Form extends React.Component {
             ? "Add a tip" : "Edit a tip"}
           </h1>
           <div className="form-input-container">
-            <label>
-              title
-              <input type="text" placeholder="title" id="title" value={this.state.title} onChange={this.handleChange}/>
-            </label>
-            <label>
-              username
-              <input type="text" placeholder="username" id="username" value={this.state.username} onChange={this.handleChange}/>
-            </label>
-            <label>
-              image
-              <input type="text" placeholder="image" id="image" value={this.state.image} onChange={this.handleChange}/>
-            </label>
-            <label>
-              description
-              <input type="textarea" placeholder="description" id="description" value={this.state.description} onChange={this.handleChange}/>
-            </label><br /><br />
+            <TextField
+              style={{marginLeft: 10},{marginRight: 10}} id="outlined" label="title" value={this.state.title} onChange={this.handleChange} margin="normal" variant="outlined"/>
+            <TextField
+              style={{marginLeft: 10},{marginRight: 10}}
+              id="outlined" label="username" value={this.state.username} onChange={this.handleChange} margin="normal" variant="outlined"/>
+            <TextField
+              style={{marginLeft: 10},{marginRight: 10}}
+              id="outlined" label="image" value={this.state.image} onChange={this.handleChange}  margin="normal" variant="outlined"/>
+            <TextField
+              style={{marginLeft: 10},{marginRight: 10}}
+              id="outlined-multiline" label="description" value={this.state.description} onChange={this.handleChange} margin="normal" variant="outlined"/>
           </div>
-          <input type="submit" value="Submit" />
+          <TextField variant="outlined" color="secondary" value="Submit">SUBMIT</TextField>
         </form>
       </div>
     )

@@ -1,7 +1,7 @@
 /* ++++++++++++++++ */
 /*      FONTS       */
 /* ++++++++++++++++ */
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Abel&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Abel|Varela+Round&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 /* ++++++++++++++++ */
@@ -10,8 +10,7 @@
 :root {
   /*FONTS*/
   --main-font: 'Abel';
-  /* --logo-font: 'Gamja Flower'; */
-  /* --accent-font: 'Monda'; */
+  --accent-font: 'Varela Round';
   /*COLOR*/
   --dark-blue: #010942;
   --medium-blue: #051FDE;
@@ -39,6 +38,10 @@ a:visited {
 a {
   text-decoration: none;
 }
+ul {
+  list-style: none;
+}
+
 /* +++++++++++++ */
 /*    HEADER     */
 /* +++++++++++++ */
@@ -448,28 +451,54 @@ main h1 {
 /* ++++++++++++++ */
 /*      SHOW      */
 /* ++++++++++++++ */
-.show-container {
+.show-article{
+  width: 100%;
+  height: 900px;
   background: white;
   margin: 0 auto;
   color: black;
+  overflow: scroll;
 }
-
+.show-container {
+  width: 50%;
+  margin: 0 auto;
+}
+.show-tip-image {
+  width: 100%;
+  height: 50%;
+  margin-top: 50px;
+}
+article h1 {
+  margin-left: 0;
+  font-family: var(--accent-font);
+  color: var(--dark-blue);
+}
+.tip-description {
+  font-size: 1.5em;
+}
+.tip-buttons {
+ display: flex;
+ flex-direction: row;
+}
+.username {
+  color: var(--true-blue);
+}
 /* ++++++++++++++ */
 /*      FORM      */
 /* ++++++++++++++ */
 .form-container {
-  width: 50%;
+  width: 90%;
   height: 900px;
   margin: 0 auto;
   margin-top: 50px;
 }
 form {
-  width: 100%;
+  width: 80%;
   height: 600px;
   background-color: white;
   /* padding: 50px; */
   border-radius: 5px;
-  /* margin: 0 auto; */
+  margin: 0 auto;
 }
 form > h1 {
   color: var(--lighter-true-blue);
