@@ -232,6 +232,9 @@ main h1 {
 .bottles, .bags, .brushes, .straws, .smokes, .diapers, .razors {
   position: absolute;
 }
+, .bags:hover, .brushes:hover, .straws:hover, .smokes:hover, .diapers:hover, .razors:hover {
+  filter: grayscale(100%);
+}
 .number {
   color: var(--red);
 }
@@ -267,11 +270,19 @@ main h1 {
 .toothbrush {
   background: url(toothbrush.svg) no-repeat;
 }
+/* BOTTLE */
 .bottle-text-container {
   margin: 50px 0 0 300px;
 }
 .bottles {
   background: url(waterbottle-fill.png) no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 150px;
+  transform: rotate(-45deg);
+}
+.bottles:hover {
+  background: url(waterbottle-y.png) no-repeat;
   background-size: contain;
   width: 100px;
   height: 150px;
@@ -288,7 +299,14 @@ main h1 {
   margin: 0 200px 0 700px;
 }
 .bags {
-  background: url(bag-fill.png) no-repeat;
+  background:  url(bag-fill.png) no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 150px;
+  transform: rotate(25deg);
+}
+.bags:hover {
+  background:  url(bag-y.png) no-repeat;
   background-size: contain;
   width: 100px;
   height: 150px;
@@ -310,6 +328,12 @@ main h1 {
   width: 150px;
   height: 150px;
 }
+.straws:hover {
+  background: url(straw-y.png) no-repeat;
+  background-size: contain;
+  width: 150px;
+  height: 150px;
+}
 .text-straw {
   width: 450px;
   font-size: 2em;
@@ -321,6 +345,13 @@ main h1 {
 }
 .brushes {
   background: url(toothbrush-fill.png) no-repeat;
+  background-size: contain;
+  width: 150px;
+  height: 250px;
+  transform: rotate(20deg);
+}
+.brushes:hover {
+  background: url(toothbrush-y.png) no-repeat;
   background-size: contain;
   width: 150px;
   height: 250px;
@@ -342,6 +373,12 @@ main h1 {
   width: 180px;
   height: 150px;
 }
+.diapers:hover {
+  background: url(diaper-y.png) no-repeat;
+  background-size: contain;
+  width: 180px;
+  height: 150px;
+}
 .text-diaper {
   width: 650px;
   font-size: 2em;
@@ -353,6 +390,13 @@ main h1 {
 }
 .razors {
   background: url(razor-fill.png) no-repeat;
+  background-size: contain;
+  width: 150px;
+  height: 250px;
+  transform: rotate(120deg);
+}
+.razors:hover {
+  background: url(razor-y.png) no-repeat;
   background-size: contain;
   width: 150px;
   height: 250px;
@@ -375,6 +419,13 @@ main h1 {
   height: 250px;
   transform: rotate(10deg);
 }
+.gums:hover {
+  background: url(gum-y.png) no-repeat;
+  background-size: contain;
+  width: 180px;
+  height: 250px;
+  transform: rotate(10deg);
+}
 .text-gum {
   width: 350px;
   font-size: 2em;
@@ -387,6 +438,13 @@ main h1 {
 }
 .smokes {
   background: url(smoking-fill.png) no-repeat;
+  background-size: contain;
+  width: 180px;
+  height: 250px;
+  transform: scaleX(-1) rotate(20deg);
+}
+.smokes:hover {
+  background: url(smoking-y.png) no-repeat;
   background-size: contain;
   width: 180px;
   height: 250px;
