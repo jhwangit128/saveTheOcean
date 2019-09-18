@@ -90,11 +90,7 @@ header {
   display: flex;
   flex-flow: row;
   height: 50%;
-
 }
-/* .add-tip-btn, .home-btn {
-  float:right;
-} */
 
 /* +++++++++++++++++++ */
 /*   WAVES ANIMATION   */
@@ -189,9 +185,6 @@ main h1 {
   /* overflow-x: scroll; */
   /* display: flex; */
 }
-.main-contents {
-
-}
 .container-drag {
   width: 30%;
   height: 30%;
@@ -205,40 +198,13 @@ main h1 {
 }
 
 /* ++++++++++++++++++ */
-/*    INFOGRAPHIC     */
+/*        DRAG        */
 /* ++++++++++++++++++ */
-/* TEXT */
-.infographic-section {
-  height: 900px;
-  padding-top: 50px;
-  background: url(whale.png) no-repeat;
-  background-size: 250% auto;
-  background-position-y: 180px;
-  display: flex;
-  flex-wrap: wrap;
-}
 .garbages-container {
+  margin-left: 60px;
   display: flex;
   flex-flow: row;
 }
-.bottle-text-container, .bag-text-container, .brush-text-container, .straw-text-container {
-  width: 100%;
-  text-align: left;
-  font-size: 1em;
-}
-.razor-text-container {
-  text-align: right;
-}
-.bottles, .bags, .brushes, .straws, .smokes, .diapers, .razors {
-  position: absolute;
-}
-, .bags:hover, .brushes:hover, .straws:hover, .smokes:hover, .diapers:hover, .razors:hover {
-  filter: grayscale(100%);
-}
-.number {
-  color: var(--red);
-}
-/* ITEMS */
 .bottle, .bag, .diaper, .straw, .razor, .gum, .smoke, .toothbrush{
   width: 90px;
   height: 150px;
@@ -257,6 +223,8 @@ main h1 {
 }
 .straw {
   background: url(straw-fill.png) no-repeat;
+  background-position: top;
+  background-size: contain;
 }
 .razor {
   background: url(razor.svg) no-repeat;
@@ -270,6 +238,35 @@ main h1 {
 .toothbrush {
   background: url(toothbrush.svg) no-repeat;
 }
+
+/* ++++++++++++++++++ */
+/*    INFOGRAPHIC     */
+/* ++++++++++++++++++ */
+/* TEXT */
+.infographic-section {
+  height: 900px;
+  padding-top: 50px;
+  background: url(whale.png) no-repeat;
+  background-size: 250% auto;
+  background-position-y: 180px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.bottle-text-container, .bag-text-container, .brush-text-container, .straw-text-container {
+  width: 100%;
+  text-align: left;
+  font-size: 1em;
+}
+.razor-text-container {
+  text-align: right;
+}
+.bottles, .bags, .brushes, .straws, .smokes, .diapers, .razors {
+  position: absolute;
+}
+.number {
+  color: var(--red);
+}
+
 /* BOTTLE */
 .bottle-text-container {
   margin: 50px 0 0 300px;
@@ -626,9 +623,4 @@ footer {
   display: flex;
   flex-direction: row;
   margin: 10px 0 20px 20px;
-}
-.App {
-  width: 500px;
-  height: 100px;
-  z-index: 15;
 }
