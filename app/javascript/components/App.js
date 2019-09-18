@@ -51,7 +51,7 @@ class App extends React.Component {
       username: '',
       image: '',
       description: '',
-      img: '',
+      img: null,
       id: null
     }
     let thisTip = {
@@ -87,8 +87,8 @@ class App extends React.Component {
           title: tip.title,
           username: tip.username,
           image: tip.image,
-          description: tip.description,
           img: tip.img,
+          description: tip.description,
           id: tip.id
         }
         break

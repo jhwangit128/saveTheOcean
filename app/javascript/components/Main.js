@@ -255,12 +255,11 @@ class Main extends React.Component {
                 {this.props.thisTip.title ?
                   <Show
                     tip={this.props.thisTip}
-                    handleDelete={this.handleDelete}
+                    handleDelete={this.deleteTip}
                     handleView={this.props.handleView}
                   />
                 : this.props.view.page === 'index'
                   ? this.state.tips.map(tip => (
-
                     <Tip
                       key={tip.id}
                       tip={tip}

@@ -10,8 +10,6 @@ class TipsController < ApplicationController
   end
 
   def create
-    params["tip"]["body"].gsub! "'", "''"
-    params["tip"]["body"].gsub!(/\n/, '<br/>')
     render json: Tip.create(params["tip"])
   end
 
@@ -20,9 +18,7 @@ class TipsController < ApplicationController
   end
 
   def update
-    params["tip"]["body"].gsub! "'", "''"
-    params["tip"]["body"].gsub!(/\n/, '<br/>')
     render json: Tip.update(params["id"], params["tip"])
   end
-  
+
 end
