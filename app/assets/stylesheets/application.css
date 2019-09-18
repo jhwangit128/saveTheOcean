@@ -72,6 +72,7 @@ header {
   float: left;
   margin-left: 20px;
   color:white;
+  cursor: pointer;
 }
 .menu {
   width: 100%;
@@ -262,6 +263,7 @@ main h1 {
 }
 .bottles, .bags, .brushes, .straws, .smokes, .diapers, .razors {
   position: absolute;
+  cursor: pointer;
 }
 .number {
   color: var(--red);
