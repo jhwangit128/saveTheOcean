@@ -7,7 +7,7 @@ import Draggable from 'react-draggable'
 // ++++++++++++++++++++++++++++++++++++
 // COMPONENET CLASS
 // ++++++++++++++++++++++++++++++++++++
-class DragBottle extends React.Component {
+class Drag extends React.Component {
 
   state = {
       activeDrags: 0,
@@ -28,17 +28,6 @@ class DragBottle extends React.Component {
         }
       });
     };
-
-    handleMouseHover = () => {
-      this.setState(this.toggleHoverState)
-    }
-
-    toggleHoverState = () => {
-      return {
-        isHovering: !state.isHovering
-      }
-    }
-
 
     onStart = () => {
       this.setState({activeDrags: ++this.state.activeDrags});
@@ -78,24 +67,71 @@ class DragBottle extends React.Component {
       const dragHandlers = {onStart: this.onStart, onStop: this.onStop};
       const {deltaPosition, controlledPosition} = this.state;
       return (
-        <div className="bottles-container">
+        <div className="garbages-container">
           <Draggable {...dragHandlers}>
-            <div className="box plastic-bottle"></div>
+            <div className="bottle"></div>
           </Draggable>
           <Draggable {...dragHandlers}>
-            <div className="box plastic-bag"></div>
+            <div className="bag"></div>
           </Draggable>
           <Draggable {...dragHandlers}>
-            <div className="box plastic-bottle"></div>
+            <div className="bottle"></div>
           </Draggable>
           <Draggable {...dragHandlers}>
-            <div className="box plastic-bottle"></div>
+            <div className="bottle"></div>
           </Draggable>
           <Draggable {...dragHandlers}>
-            <div className="box plastic-bag"></div>
+            <div className="bag"></div>
           </Draggable>
           <Draggable {...dragHandlers}>
-            <div className="box plastic-bottle"></div>
+            <div className="bottle"></div>
+          </Draggable>
+          <Draggable {...dragHandlers}>
+            <div className="diaper"></div>
+          </Draggable>
+          <Draggable {...dragHandlers}>
+            <div className="straw"></div>
+          </Draggable>
+          <Draggable {...dragHandlers}>
+            <div className="razor"></div>
+          </Draggable>
+          <Draggable {...dragHandlers}>
+            <div className="gum"></div>
+          </Draggable>
+          <Draggable {...dragHandlers}>
+            <div className="smoke"></div>
+          </Draggable>
+          <Draggable {...dragHandlers}>
+            <div className="toothbrush"></div>
+          </Draggable>
+          <Draggable {...dragHandlers}>
+            <div className="bottle"></div>
+          </Draggable>
+          <Draggable {...dragHandlers}>
+            <div className="bottle"></div>
+          </Draggable>
+          <Draggable {...dragHandlers}>
+            <div className="bottle"></div>
+          </Draggable>
+          <Draggable {...dragHandlers}>
+            <div className="bottle"></div>
+          </Draggable>
+          <Draggable {...dragHandlers}>
+            <div className="bottle"></div>
+          </Draggable>
+          <Draggable {...dragHandlers}>
+            <div className="diaper"></div>
+          </Draggable><Draggable {...dragHandlers}>
+            <div className="diaper"></div>
+          </Draggable>
+          <Draggable {...dragHandlers}>
+            <div className="razor"></div>
+          </Draggable>
+          <Draggable {...dragHandlers}>
+            <div className="toothbrush"></div>
+          </Draggable>
+          <Draggable {...dragHandlers}>
+            <div className="straw"></div>
           </Draggable>
         </div>
       );
@@ -105,4 +141,4 @@ class DragBottle extends React.Component {
 
 
 
-export default DragBottle
+export default Drag

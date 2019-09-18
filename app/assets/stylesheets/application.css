@@ -196,9 +196,6 @@ main h1 {
   width: 30%;
   height: 30%;
 }
-.box {
-  color: white;
-}
 .hover {
   display: none;
   color: white;
@@ -217,40 +214,61 @@ main h1 {
   background: url(whale.png) no-repeat;
   background-size: 250% auto;
   background-position-y: 180px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.garbages-container {
+  display: flex;
+  flex-flow: row;
 }
 .bottle-text-container, .bag-text-container, .brush-text-container, .straw-text-container {
   width: 100%;
   text-align: left;
   font-size: 1em;
 }
-.brush-text-container {
+.razor-text-container {
   text-align: right;
+}
+.bottles, .bags, .brushes, .straws, .smokes, .diapers, .razors {
+  position: absolute;
 }
 .number {
   color: var(--red);
 }
 /* ITEMS */
-.plastic-bottle, .plastic-bag, .diaper, .straw {
+.bottle, .bag, .diaper, .straw, .razor, .gum, .smoke, .toothbrush{
   width: 90px;
   height: 150px;
   margin: 0;
 }
-.plastic-bottle {
+.bottle {
   background: url(waterbottle.svg) no-repeat;
-  width: 90px;
-  height: 150px;
+  width: 50px;
+  height: 100px;
 }
-.plastic-bag {
+.bag {
   background: url(bag.svg) no-repeat;
 }
 .diaper {
   background: url(diaper.svg) no-repeat;
 }
 .straw {
-  background: url(straw.png) no-repeat;
+  background: url(straw-fill.png) no-repeat;
+}
+.razor {
+  background: url(razor.svg) no-repeat;
+}
+.gum {
+  background: url(gum.svg) no-repeat;
+}
+.smoke {
+  background: url(smoking.svg) no-repeat;
+}
+.toothbrush {
+  background: url(toothbrush.svg) no-repeat;
 }
 .bottle-text-container {
-  margin: 0 0 0 300px;
+  margin: 50px 0 0 300px;
 }
 .bottles {
   background: url(waterbottle-fill.png) no-repeat;
@@ -260,14 +278,14 @@ main h1 {
   transform: rotate(-45deg);
 }
 .text {
-  width: 450px;
+  width: 550px;
   font-size: 2em;
-  margin: 240px 0 0 60px;
+  margin: 270px 0 0 -200px;
   transform: rotate(45deg);
 }
 /* BAG */
 .bag-text-container {
-  margin: 0 200px 0 500px;
+  margin: 0 200px 0 700px;
 }
 .bags {
   background: url(bag-fill.png) no-repeat;
@@ -284,7 +302,7 @@ main h1 {
 }
 /* STRAW */
 .straw-text-container {
-  margin: 0 200px 0 300px;
+  margin: 150px 0 0 900px;
 }
 .straws {
   background: url(straw-fill.png) no-repeat;
@@ -295,28 +313,28 @@ main h1 {
 .text-straw {
   width: 450px;
   font-size: 2em;
-  margin: 0 0 0 130px;
+  margin: 130px 0 0 30px;
 }
 /* BRUSH */
 .brush-text-container {
-  margin: 0 0 0 600px;
+  margin: 300px 0 0 800px;
 }
 .brushes {
   background: url(toothbrush-fill.png) no-repeat;
   background-size: contain;
   width: 150px;
   height: 250px;
-  transform: rotate(60deg);
+  transform: rotate(20deg);
 }
 .text-brush {
   width: 450px;
   font-size: 2em;
-  transform: rotate(-60deg);
-  margin: 350px 0 0 -320px;
+  transform: rotate(-20deg);
+  margin: 0 0 0 150px;
 }
 /* DIAPER */
 .diaper-text-container {
-  margin: -450px 0 0 1090px;
+  margin: -90px 0 0 1190px;
 }
 .diapers {
   background: url(diaper-fill.png) no-repeat;
@@ -331,7 +349,7 @@ main h1 {
 }
 /* RAZOR */
 .razor-text-container {
-  margin: 250px 0 0 100px;
+  margin: -350px 0 0 100px;
 }
 .razors {
   background: url(razor-fill.png) no-repeat;
@@ -344,28 +362,28 @@ main h1 {
   width: 450px;
   font-size: 2em;
   transform: rotate(-120deg);
-  margin: -200px 0 0 -350px;
+  margin: 240px 0 0 -10px;
 }
 /* GUM */
 .gum-text-container {
-  margin: -400px 0 0 800px;
+  margin: 0 0 0 -950px;
 }
 .gums {
   background: url(gum-fill.png) no-repeat;
   background-size: contain;
   width: 180px;
   height: 250px;
-  transform: rotate(120deg);
+  transform: rotate(10deg);
 }
 .text-gum {
   width: 350px;
   font-size: 2em;
-  transform: rotate(-120deg);
-  margin: -200px 0 0 -250px;
+  transform: rotate(-10deg);
+  margin: 0 0 0 220px;
 }
 /* SMOKE */
 .smoke-text-container {
-  margin: -300px 0 0 1250px;
+  margin: -800px 0 0 1250px;
 }
 .smokes {
   background: url(smoking-fill.png) no-repeat;
@@ -375,10 +393,10 @@ main h1 {
   transform: scaleX(-1) rotate(20deg);
 }
 .text-smoke {
-  width: 350px;
+  width: 450px;
   font-size: 2em;
   transform: scaleX(-1) rotate(20deg);
-  margin: -50px 0 0 130px;
+  margin: 150px 0 0 -100px;
 }
 
 /* +++++++++++++++ */

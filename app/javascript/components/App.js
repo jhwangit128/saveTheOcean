@@ -6,7 +6,9 @@ import React from 'react'
 import Header from './Header.js'
 import Main from './Main.js'
 import Footer from './Footer.js'
+import Drag from './Drag.js'
 import Button from '@material-ui/core/Button';
+
 
 // ++++++++++++++++++++++++++++++++++++
 // COMPONENET CLASS
@@ -119,6 +121,7 @@ class App extends React.Component {
             formInputs={this.state.formInputs}
             thisTip={this.state.thisTip}
           />
+          <Drag/>
         </div>
         <Footer />
       </div>

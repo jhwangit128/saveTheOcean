@@ -18,7 +18,7 @@ class TextSmoking extends React.Component {
         IN 2018, OVER<br />
         <CountUp className="number" delay={1} end={2400000}>
         </CountUp>
-        &nbsp;CIGARETTE<br />FILTERS FOUND<br />ON INTERNATIONAL<br /> COASTAL CLEANUP DAY
+        &nbsp;CIGARETTE FILTERS<br /> FOUND ON INTERNATIONAL<br /> COASTAL CLEANUP DAY
       </div>
     )
   }
