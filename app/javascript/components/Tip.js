@@ -30,7 +30,7 @@ class Tip extends React.Component {
               title={this.props.tip.username}
               onClick={() => {this.props.handleView('show', this.props.tip)}}
             />
-            <CardContent>
+            <CardContent style={{height: 140}}>
               <Typography gutterBottom variant="h5" component="h2">
                 {this.props.tip.title}
               </Typography>

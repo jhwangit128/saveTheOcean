@@ -12,7 +12,7 @@ class Show extends React.Component {
   // +++++++++++++++++++
   render () {
     return (
-      <article className="show-article">
+      <article>
         <div className="show-container">
           <div className="show-tip-image">
             <img src={this.props.tip.image}/>
@@ -29,8 +29,8 @@ class Show extends React.Component {
             <p>{this.props.tip.description}</p>
           </div>
           <div className="tip-buttons">
-              <Button className="edit-btn" onClick={() => {this.props.handleView('editTip', this.props.tip)}}>EDIT TIP</Button>
-              <Button onClick={() => {this.props.handleDelete(this.props.tip.id)}}>DELETE TIP</Button>
+              <Button variant="outlined" size="small" color="primary" className="edit-btn" onClick={() => {this.props.handleView('editTip', this.props.tip)}}>EDIT TIP</Button>
+              <Button variant="outlined" size="small" color="primary" onClick={() => {this.props.handleDelete(this.props.tip.id)}}>DELETE TIP</Button>
           </div>
         </div>
       </article>

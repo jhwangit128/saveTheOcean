@@ -527,13 +527,14 @@ main h1 {
 /* ++++++++++++++ */
 /*      SHOW      */
 /* ++++++++++++++ */
-.show-article{
+article {
   width: 100%;
-  height: 900px;
+  height: 1000px;
   background: white;
   margin: 0 auto;
   color: black;
   overflow: scroll;
+  padding-bottom: 50px;
 }
 .show-container {
   width: 50%;
@@ -542,6 +543,8 @@ main h1 {
 .show-tip-image {
   width: 100%;
   height: 50%;
+  overflow: hidden;
+  margin: 0 auto;
   margin-top: 50px;
 }
 article h1 {
@@ -550,15 +553,19 @@ article h1 {
   color: var(--dark-blue);
 }
 .tip-description {
+  width: 100%;
   font-size: 1.5em;
 }
 .tip-buttons {
  display: flex;
  flex-direction: row;
+ float: right;
+ margin-top: 30px;
 }
 .username {
   color: var(--true-blue);
 }
+
 /* ++++++++++++++ */
 /*      FORM      */
 /* ++++++++++++++ */
@@ -568,49 +575,39 @@ article h1 {
   height: 900px;
   margin: 0 auto;
   margin-top: 50px;
+  border-radius: 5px;
 }
 label {
   color: var(--palatinate-blue);
 }
 form {
-  width: 80%;
-
+  width: 60%;
   border-radius: 5px;
   margin: 0 auto;
-}
-form input[type=submit] {
-  margin-top: 10px;
-  width: 35%;
-  height: 40px;
-  border-radius: 5px;
-  background: var(--dark-blue);
-  color: white;
-  border: 0;
-  font-size: 1em;
-  text-transform: uppercase;
-  float: right;
 }
 input {
   width: 80%;
   padding: 10px;
-  margin-right: 10px;
   border-radius: 5px;
   font-size: 0.9em;
-  resize: none;
 }
-
 textarea {
-  width: 82%;
+  padding: 10px;
+  width: 80%;
   resize: none;
   font-size: 0.9em;
   border-radius: 5px;
   line-height: 30px;
-  overflow: scroll;
 }
 form > h1 {
   color: var(--lighter-true-blue);
   padding-top: 30px;
+  margin-left: 0;
 }
+.form {
+  margin: 0 auto;
+}
+
 /* ++++++++++++++++ */
 /*      FOOTER      */
 /* ++++++++++++++++ */

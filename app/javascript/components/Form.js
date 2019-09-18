@@ -98,7 +98,7 @@ class Form extends React.Component {
           <label>DESCRIPTION<br/>
             <textarea rows="10" cols="80" placeholder="description" id="description" value={this.state.description} onChange={this.handleChange}>
             </textarea></label><br /><br />
-          <input type="submit" value="Submit"/>
+          <Button type="submit" size="large" variant="outlined" color="secondary">SUBMIT</Button>
         </form>
       </div>
     )
