@@ -11,14 +11,18 @@ link to live site: https://savetheocean.herokuapp.com
 * Rails
 * React
 * PostgreSQL
-* React UI Library
+* React UI Libraries
+  - [Material UI](https://material-ui.com)
+  - [ScrollableAnchor](https://github.com/gabergg/react-scrollable-anchor)
+  - [React-Draggable](https://github.com/mzabriskie/react-draggable)
+  - [CountUp](https://github.com/glennreyes/react-countup)
 
 ## User Stories
 
-* Users will be able to add a post.
-* Users will be able to view infomation on ocean plastic pollution.
-* Users will be able to drag and drop plastic icons to view those info.
-* Users will be able to edit and delete their posts.
+* Users will be able to add a tip on using less plastic.
+* Users will be able to view facts on ocean plastic pollution.
+* Users will be able to toggle plastic icons to view facts about them.
+* Users will be able to edit and delete their tips.
 
 ## Wireframes
 
@@ -31,3 +35,6 @@ link to live site: https://savetheocean.herokuapp.com
 *
 ## Future Improvements
 *
+
+## Credits
+* Icon made by [Freepik],[Vitaly Gorbachev], and [Nikita Golubev] from www.flaticon.com
