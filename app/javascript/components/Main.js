@@ -230,7 +230,6 @@ class Main extends React.Component {
                 {this.state.isToggleSmoke ? <TextEmpty /> : <TextSmoking /> }
               </div>
             </div>
-            <Drag/>
           </div>
           </ScrollableAnchor>
           <ScrollableAnchor id={'section2'}>
