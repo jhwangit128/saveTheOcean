@@ -1,16 +1,17 @@
 # SAVE THE OCEAN
-link to live site: https://
+link to live site: https://savetheocean.herokuapp.com
 
 ## About
 
 * Ocean plastic pollution awareness site
-* This app allows users to add and share their tips on how to reduce plastic waste.
+* This app allows users to add and share their tips on using less plastic.
 
 ## Tech used
 
 * Rails
 * React
 * PostgreSQL
+* React UI Library
 
 ## User Stories
 
