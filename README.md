@@ -32,9 +32,10 @@ link to live site: https://savetheocean.herokuapp.com
 ![wireframe_4](wireframes/wireframe4.png)
 
 ## Challenges
-*
+* Originally, I wanted to trigger the "Facts" based on Drag and Drop UI but I couldn't get it to work so instead, I wrote a "toggle" function.
 ## Future Improvements
-*
+* I really want to get "Drag and Drop" working.
+* Add authentication functionality so that only logged in users can add, edit and delete tips.
 
 ## Credits
 * Icon made by [Freepik],[Vitaly Gorbachev], and [Nikita Golubev] from www.flaticon.com
