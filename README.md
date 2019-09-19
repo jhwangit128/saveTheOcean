@@ -11,7 +11,7 @@ link to live site: https://savetheocean.herokuapp.com
 * Rails
 * React
 * PostgreSQL
-* React UI Libraries
+* React UI Libraries/Components
   - [Material UI](https://material-ui.com)
   - [ScrollableAnchor](https://github.com/gabergg/react-scrollable-anchor)
   - [React-Draggable](https://github.com/mzabriskie/react-draggable)
