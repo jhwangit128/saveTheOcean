@@ -171,7 +171,7 @@ class Main extends React.Component {
           </h1>
         </div>
         <div className="section-btn">
-          <Button variant="contained" color="primary"><a href='#section1'> INFOGRAPHIC</a></Button>
+          <Button variant="contained" color="primary"><a href='#section1'> FACTS</a></Button>
           <Button variant="contained" color="primary"><a href='#section2'> IMAGES</a></Button>
           <Button variant="contained" color="primary"><a href='#section3'> TIPS</a></Button>
         </div>
@@ -187,9 +187,9 @@ class Main extends React.Component {
         </div>
       </div>
         <div className="main-contents">
-
           <ScrollableAnchor id={'section1'}>
             <div className="infographic-section">
+              <h1>{this.props.view.pageTitle}</h1>
               <div className="bottle-text-container">
                 <div onClick={this.clickBottle} className="bottles">
                   {this.state.isToggleBottle ? <TextEmpty /> : <Text /> }

@@ -22,7 +22,7 @@ class App extends React.Component {
     this.state = {
       view: {
         page: 'index',
-        pageTitle: "Let's save the ocean"
+        pageTitle: "Our Ocean is in trouble"
       },
       formInputs: {
         title: null,
@@ -67,10 +67,10 @@ class App extends React.Component {
 
     switch (view) {
       case 'index':
-        pageTitle = "Let's save the ocean"
+        pageTitle = "Our Ocean is in trouble"
         break
       case 'show':
-        pageTitle = "Tips"
+        pageTitle = "How Can We Avoid Plastic & Reduce Plastic Waste?"
         thisTip = {
           title: tip.title,
           username: tip.username,
