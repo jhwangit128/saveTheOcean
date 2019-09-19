@@ -31,6 +31,11 @@ link to live site: https://savetheocean.herokuapp.com
 ![wireframe_3](wireframes/wireframe3.png)
 ![wireframe_4](wireframes/wireframe4.png)
 
+## Screenshots
+
+![screeshot_1](wireframes/saveocean_ss1.png)
+![wireframe_2](wireframes/saveocean_ss2.png)
+
 ## Challenges
 * Originally, I wanted to trigger the "Facts" based on Drag and Drop UI but I couldn't get it to work so instead, I wrote a "toggle" function.
 ## Future Improvements
