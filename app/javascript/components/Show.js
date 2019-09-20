@@ -14,7 +14,6 @@ class Show extends React.Component {
     return (
       <article>
         <div className="show-container">
-          <h1>{this.props.view.pageTitle}</h1>
           <div className="show-tip-image">
             <img src={this.props.tip.image}/>
           </div>
