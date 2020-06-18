@@ -53,7 +53,7 @@ Tip.create({
 Tip.create({
   "title" => "Use a handkerchief instead of paper tissue",
   "username" =>"larixfda",
-  "image" => "https://images.manmadediy.com/1VpkX4_bpKYatD6N_VYwB35VYTw=/800x0/filters:no_upscale()/https://assets.manmadediy.com/photos/33008/handkerchiefs-2original.jpg",
+  "image" => "https://cdn.shopify.com/s/files/1/1416/9084/products/wafudetail5_1024x1024.jpg?v=1590629896",
   "description" => "I have never seen a Kleenex box without any plastic window. More importantly, we can avoid all waste by opting for reusable hankies. Some people make their own out of old t-shirts and cloth diapers. I found lots of hankies at a thrift shop. Another ingenious idea is the HankyBook, which makes carrying a cloth hanky so much neater.",
   "img" => "https://media.nature.com/w800/magazine-assets/d41586-019-01252-0/d41586-019-01252-0_16659420.jpg"
 })
