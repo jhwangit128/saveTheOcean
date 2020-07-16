@@ -489,9 +489,9 @@ header {
 }
 .images-container > p {
   width: 35%;
-  font-size: 2em;
+  font-size: 1.8em;
   line-height: 1.5em;
-  text-align: justify;
+  text-align: left;
 
 }
 .image {
