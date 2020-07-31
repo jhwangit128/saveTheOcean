@@ -12,7 +12,7 @@ class Footer extends React.Component {
       <footer className="footer" >
             <div className="footer-items">
               <span>JIHA HWANG</span>
-              <span className="copy">© 2019 COPYRIGHT</span>
+              <span className="copy">© 2020 COPYRIGHT</span>
             </div>
       </footer>
     )
